@@ -1,10 +1,11 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using AdoptAFish_v2.Utilities;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System.Threading;
 
-namespace AdoptAFish_v2._0;
+namespace AdoptAFish_v2;
 
 public class Program
 {
@@ -42,11 +43,11 @@ public class Program
 
                     //setup our DI
                     services.AddSingleton(configuration);
+                    services.AddSingleton<ILoggerFactory, LoggerFactory>();
+                    services.AddSingleton<ILibrary, Library>();
 
                     // add the application logic to our hosted service so this starts running
                     services.AddHostedService<Application>();
-
-                    services.AddSingleton<ILoggerFactory, LoggerFactory>();
                 });
     }
 
