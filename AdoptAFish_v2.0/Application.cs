@@ -36,7 +36,7 @@ namespace AdoptAFish_v2
             try
             {
                 var player = _library.SetUpPlayer();
-                if (player.PlayerName != null)
+                if (!string.IsNullOrEmpty(player.PlayerName))
                 {
                     Console.WriteLine($"Nice to meet you {player.PlayerName}! Let's get your free tank and fish setup :)");
                     //TODO: Set up free tank and fish using the detail randomizers for both

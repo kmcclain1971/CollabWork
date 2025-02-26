@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdoptAFish_v2.Store
 {
-    internal class Store
+    internal class Storefront
     {
     }
 }

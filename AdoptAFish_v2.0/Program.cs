@@ -18,9 +18,7 @@ public class Program
         SetConsoleProperties();
 
         // Make use of //TODO: comments - they can be very handy for keeping track of where you leave off in code
-        // To see your list of TODOs for an application, go to top menu View > TaskList
-        //TODO: Start application from here - application class will hold the main logic components
-        
+        // To see your list of TODOs for an application, go to top menu View > TaskList     
 
         var host = CreateHostBuilder();
         await host.RunConsoleAsync();
