@@ -40,5 +40,11 @@ namespace AdoptAFish_v2.Utilities
 
             return player;
         }
+
+        public void GenerateTank()
+        { }
+
+        public void GenerateFish()
+        { }
     }
 }

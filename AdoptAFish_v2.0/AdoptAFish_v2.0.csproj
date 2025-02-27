@@ -21,9 +21,4 @@
     </None>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Fish\" />
-    <Folder Include="Tank\" />
-  </ItemGroup>
-
 </Project>
