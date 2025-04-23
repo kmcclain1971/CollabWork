@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Numerics;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -8,6 +9,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace WaywardHorizons
 {
@@ -16,6 +18,8 @@ namespace WaywardHorizons
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        public Player ThePlayer = new Player();
         public MainWindow()
         {
             InitializeComponent();
@@ -23,7 +27,7 @@ namespace WaywardHorizons
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
