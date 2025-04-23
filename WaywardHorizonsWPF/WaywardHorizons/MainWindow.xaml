@@ -6,8 +6,7 @@
         xmlns:local="clr-namespace:WaywardHorizons"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="800">
-     <Grid Loaded="Grid_Loaded">
-        <Background="#FFC80404">
+    <Grid Loaded="Grid_Loaded" Background="#FFC80404">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
