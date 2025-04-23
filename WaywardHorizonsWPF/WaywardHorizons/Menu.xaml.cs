@@ -58,5 +58,6 @@ namespace WaywardHorizons
             //NavigationService.Navigate(new Uri("", UriKind.Relative));
             NavigationService.Navigate(new Uri("Locations.xaml", UriKind.Relative));
         }
+
     }
 }

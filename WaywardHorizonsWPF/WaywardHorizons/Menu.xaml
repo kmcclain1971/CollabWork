@@ -9,12 +9,15 @@
       Title="Menu">
 
     <Grid KeyDown="Grid_KeyDown" Background="#FFC80000">
-        <Label Content="WAYWARD HORIZONS" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Height="59" Width="374" Uid="mainLabel" FontSize="36" FontFamily="Algerian"/>
-        <TextBlock HorizontalAlignment="Left" Margin="143,69,0,0" TextWrapping="Wrap" Text="A game by Conor McClain" VerticalAlignment="Top" Uid="mainSubtitle" Height="16" Width="140"/>
-        <TextBlock HorizontalAlignment="Left" Margin="53,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="110" Width="303" TextAlignment="Center"><Run Text="Hello! "/><Run Text="My name is Gregory! Allow me to be your guide! Get ready for the Adventure of a lifetime friend!"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="What is your name brave adventurer?"/></TextBlock>
-        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="101,335,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Height="28"/>
-        <Button Content="Submit" HorizontalAlignment="Left" Margin="242,374,0,0" VerticalAlignment="Top" Height="24" Width="64" Click="Button_Click"/>
-        <Image Margin="434,77,40,63" Source="/images/MAP.png" Stretch="Fill"/>
+        <Grid HorizontalAlignment="Left" Height="388" VerticalAlignment="Top" Width="734">
+            <Label Content="WAYWARD HORIZONS" HorizontalAlignment="Left" VerticalAlignment="Top" Height="59" Width="374" Uid="mainLabel" FontSize="36" FontFamily="Algerian"/>
+            <TextBlock HorizontalAlignment="Left" Margin="108,59,0,0" TextWrapping="Wrap" Text="A game by Conor McClain" VerticalAlignment="Top" Uid="mainSubtitle" Height="16" Width="140"/>
+            <TextBlock HorizontalAlignment="Left" Margin="27,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="110" Width="303" TextAlignment="Center"><Run Text="Hello! "/><Run Text="My name is Gregory! Allow me to be your guide! Get ready for the Adventure of a lifetime friend!"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="What is your name brave adventurer?"/></TextBlock>
+            <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="75,325,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Height="28"/>
+            <Button Content="Submit" HorizontalAlignment="Left" Margin="216,364,0,0" VerticalAlignment="Top" Height="24" Width="64" Click="Button_Click"/>
+            <Image x:Name="Map" Margin="408,67,0,11" Source="/images/MAP.png" Stretch="Fill"/>
+
+        </Grid>
 
     </Grid>
 </Page>
