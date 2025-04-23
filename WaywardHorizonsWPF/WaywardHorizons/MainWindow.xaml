@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WaywardHorizons"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="500" Width="800">
+    <Grid Background="#FFC80404">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="WAYWARD HORIZONS" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" Height="59" Width="374" Uid="mainLabel" FontSize="36" FontFamily="Algerian"/>
+        <Button Content="Submit" HorizontalAlignment="Left" Margin="242,374,0,0" VerticalAlignment="Top" Height="24" Width="64" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="143,69,0,0" TextWrapping="Wrap" Text="A game by Conor McClain" VerticalAlignment="Top" Uid="mainSubtitle" Height="16" Width="140"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="110" Width="303" TextAlignment="Center"><Run Text="Hello! "/><Run Text="My name is Gregory! Allow me to be your guide! Get ready for the Adventure of a lifetime friend!"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="What is your name brave adventurer?"/></TextBlock>
+        <TextBox HorizontalAlignment="Left" Margin="101,335,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" TextChanged="TextBox_TextChanged" Height="28"/>
+        <Image HorizontalAlignment="Left" Height="249" Margin="454,111,0,0" VerticalAlignment="Top" Width="301"/>
+        <Image Margin="434,77,40,97" Source="/images/MAP.png" Stretch="Fill"/>
 
     </Grid>
 </Window>
