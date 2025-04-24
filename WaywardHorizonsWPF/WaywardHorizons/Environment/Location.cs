@@ -52,7 +52,7 @@ namespace WaywardHorizons.Environment
             {
                 foreach (NPC npcs in NPCs)
                 {
-                    output += $"       {number}.{npcs.Name}\n";
+                    output += $"       {number}.{npcs.PlayerName}\n";
                     number++;
                 }
             }

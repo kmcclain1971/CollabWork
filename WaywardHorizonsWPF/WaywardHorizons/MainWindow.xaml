@@ -6,12 +6,12 @@
         xmlns:local="clr-namespace:WaywardHorizons"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="800">
-    <Grid Loaded="Grid_Loaded" Background="#FFC80404">
+    <Grid Loaded="Grid_Loaded">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-      <Frame x:Name="PageFrame" NavigationUIVisibility="Hidden" />
-        
+        <Frame x:Name="PageFrame" NavigationUIVisibility="Hidden" />
+
 
     </Grid>
 </Window>

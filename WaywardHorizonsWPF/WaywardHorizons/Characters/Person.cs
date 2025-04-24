@@ -7,10 +7,10 @@ using WaywardHorizons.Accessories;
 
 namespace WaywardHorizons.Characters
 {
-    internal class Person
+    public class Person
     {
         #region Properties
-        public string Name {  get; set; }
+        public string PlayerName {  get; set; }
         public int Health { get; set; } = 100;
         public int Supplies { get; set; } = 100;
         public List<Item> Items { get; set; }
@@ -28,8 +28,8 @@ namespace WaywardHorizons.Characters
         {
             if (!string.IsNullOrWhiteSpace(newName))
             {
-                Name = newName;
-                Console.WriteLine($"Player name is: {Name}");
+                PlayerName = newName;
+                Console.WriteLine($"Player name is: {PlayerName}");
             }
             else
             {

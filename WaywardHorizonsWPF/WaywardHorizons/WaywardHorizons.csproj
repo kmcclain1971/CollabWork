@@ -20,8 +20,10 @@
     <None Remove="images\The Grove.png" />
     <None Remove="LakeLava.png" />
     <None Remove="MAP.png" />
+    <None Remove="parchment.jpg" />
     <None Remove="Swamp of Scarlet Rot.png" />
     <None Remove="The Grove.png" />
+    <None Remove="Wood Sign.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -50,8 +52,10 @@
     </Resource>
     <Resource Include="LakeLava.png" />
     <Resource Include="MAP.png" />
+    <Resource Include="parchment.jpg" />
     <Resource Include="Swamp of Scarlet Rot.png" />
     <Resource Include="The Grove.png" />
+    <Resource Include="Wood Sign.jpg" />
   </ItemGroup>
 
   <ItemGroup>

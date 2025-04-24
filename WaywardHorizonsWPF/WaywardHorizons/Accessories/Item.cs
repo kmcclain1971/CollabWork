@@ -1,6 +1,6 @@
 ﻿namespace WaywardHorizons.Accessories
 {
-    internal class Item
+    public class Item
     {
         public string ItemName;
     }

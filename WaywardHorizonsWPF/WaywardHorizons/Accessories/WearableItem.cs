@@ -1,6 +1,6 @@
 ﻿namespace WaywardHorizons.Accessories
 {
-    internal class WearableItem : Item
+    public class WearableItem : Item
     {
         public string WearableLocation = "neck";
         public WearableItem()

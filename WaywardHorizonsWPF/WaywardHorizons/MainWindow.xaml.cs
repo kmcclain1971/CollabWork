@@ -10,6 +10,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml.Linq;
+using WaywardHorizons.Characters;
 
 namespace WaywardHorizons
 {
@@ -19,7 +20,8 @@ namespace WaywardHorizons
     public partial class MainWindow : Window
     {
 
-        public Player ThePlayer = new Player();
+        public Person ThePlayer = new Person();
+
         public MainWindow()
         {
             InitializeComponent();

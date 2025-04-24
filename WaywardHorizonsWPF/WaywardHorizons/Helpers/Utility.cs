@@ -156,7 +156,7 @@ namespace WaywardHorizons.Helpers
             var titleSequence = new StringBuilder();
             titleSequence.Append("/*********************************************************************************************/\n");
             titleSequence.Append("/***********************            Wayward Horizons          ********************************/\n");
-            titleSequence.Append("/********************  Adventurer: " + adventurer.Name + " || Health: " + adventurer.Health + " || Supplies: " + adventurer.Supplies + "  ********************/\n");
+            titleSequence.Append("/********************  Adventurer: " + adventurer.PlayerName + " || Health: " + adventurer.Health + " || Supplies: " + adventurer.Supplies + "  ********************/\n");
             titleSequence.Append("/*********************************************************************************************/\n");
             titleSequence.Append("\n\n\n");
 

@@ -18,15 +18,15 @@
                     <DropShadowEffect/>
                 </TextBlock.Effect>
             </TextBlock>
-            <Button x:Name="Lake" Content="Lake" HorizontalAlignment="Left" Margin="65,27,0,0" VerticalAlignment="Top" Height="132" Width="144" Opacity="0" Click="Lake_Click"/>
-            <Button x:Name="Forest" Content="Forest" HorizontalAlignment="Left" Margin="556,22,0,0" VerticalAlignment="Top" Height="132" Width="144" Click="Forest_Click" Opacity="0">
+            <Button x:Name="Lake" Content="Lake" HorizontalAlignment="Left" Margin="65,27,0,0" VerticalAlignment="Top" Height="132" Width="210" Opacity="0" Click="Lake_Click"/>
+            <Button x:Name="Forest" Content="Forest" HorizontalAlignment="Left" Margin="544,22,0,0" VerticalAlignment="Top" Height="132" Width="210" Click="Forest_Click" Opacity="0">
                 <Button.Effect>
                     <BlurEffect/>
                 </Button.Effect>
             </Button>
-            <Button x:Name="Swamp" Content="Swamp" HorizontalAlignment="Left" Margin="610,237,0,0" VerticalAlignment="Top" Height="134" Width="144" Opacity="0" Click="Swamp_Click"/>
-            <Button x:Name="Grove" Content="Grove" HorizontalAlignment="Center" VerticalAlignment="Center" Height="132" Width="144" Opacity="0" Click="Grove_Click"/>
-            <Button x:Name="Desert" Content="Desert" HorizontalAlignment="Left" Margin="65,291,0,0" VerticalAlignment="Top" Height="132" Width="144" Opacity="0" Click="Desert_Click"/>
+            <Button x:Name="Swamp" Content="Swamp" HorizontalAlignment="Left" Margin="556,225,0,0" VerticalAlignment="Top" Height="146" Width="198" Opacity="0" Click="Swamp_Click"/>
+            <Button x:Name="Grove" Content="Grove" HorizontalAlignment="Left" VerticalAlignment="Center" Height="132" Width="242" Opacity="0" Click="Grove_Click" Margin="275,0,0,0"/>
+            <Button x:Name="Desert" Content="Desert" HorizontalAlignment="Left" Margin="52,236,0,0" VerticalAlignment="Top" Height="187" Width="175" Opacity="0" Click="Desert_Click"/>
             <TextBlock HorizontalAlignment="Center" Margin="0,66,0,0" TextWrapping="Wrap" Text="Choose a location to explore!" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="14">
                 <TextBlock.Effect>
                     <DropShadowEffect/>
