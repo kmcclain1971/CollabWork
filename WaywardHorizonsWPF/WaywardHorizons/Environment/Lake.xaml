@@ -21,15 +21,15 @@
             <TextBlock.Effect>
                 <DropShadowEffect/>
             </TextBlock.Effect><Run Text="Health:"/><LineBreak/><Run Text="Supplies:"/></TextBlock>
-        <TextBlock Uid="tbEvents" HorizontalAlignment="Left" Margin="36,287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="367" FontWeight="Bold" FontSize="14" Foreground="White">
+        <TextBlock Name="tbEvent" HorizontalAlignment="Left" Margin="37,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="538" FontWeight="Bold" FontSize="14" Foreground="White">
             <TextBlock.Effect>
                 <DropShadowEffect/>
             </TextBlock.Effect><Run Text="Enter Choice Below..."/>
         </TextBlock>
-        <ListBox ItemsSource="{Binding LocationEvents}" x:Name="lbEvents" Margin="33,80,130,178" Background="{x:Null}" Foreground="White">
+        <ListBox ItemsSource="{Binding LocationEvents}" x:Name="lbEvents" Margin="37,138,578,225" Background="{x:Null}" Foreground="White">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding Description}" />
+                    <TextBlock Text="{Binding ChoiceText}" />
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>

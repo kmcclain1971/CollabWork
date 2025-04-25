@@ -35,8 +35,10 @@ namespace WaywardHorizons
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            // give the list box our list of event items
-            lbEvents.ItemsSource = LocationEvents;
+            // set the tbEvent text value to the first event description in the array to get started
+            tbEvent.Text = LocationEvents[0].Description.ToString();
+            // give the list box our list of event actions
+            lbEvents.ItemsSource = LocationEvents[0].Choices;
         }
 
 
