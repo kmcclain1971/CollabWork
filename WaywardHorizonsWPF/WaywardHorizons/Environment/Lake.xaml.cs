@@ -35,9 +35,7 @@ namespace WaywardHorizons
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            //var location = new Location();
-            //location.LocationId = _locationId;
-            //location.Explore(_player);
+            // give the list box our list of event items
             lbEvents.ItemsSource = LocationEvents;
         }
 
