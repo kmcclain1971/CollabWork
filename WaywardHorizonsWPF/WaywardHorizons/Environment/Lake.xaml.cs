@@ -1,19 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using WaywardHorizons.Characters;
 using WaywardHorizons.Environment;
+using WaywardHorizons.Helpers;
 
 namespace WaywardHorizons
 {
@@ -24,12 +13,14 @@ namespace WaywardHorizons
     {
         private Person _player { get; set; }
         private int _locationId { get; set; }
+        public List<Event> LocationEvents { get; set; }
 
         public Lake(Person player, int LocationId)
         {
             InitializeComponent();
             _player = player;
             _locationId = LocationId;
+            LocationEvents = GenerateLakeEvents();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -44,15 +35,17 @@ namespace WaywardHorizons
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            var location = new Location();
-            location.LocationId = _locationId;
-            location.Explore(_player);
+            //var location = new Location();
+            //location.LocationId = _locationId;
+            //location.Explore(_player);
+            lbEvents.ItemsSource = LocationEvents;
         }
 
 
-        private void GenerateLakeEvents()
+        private List<Event> GenerateLakeEvents()
         {
-
+            var util = new Utility();
+            return util.GenerateEvents(_locationId);
         }
     }
 }
