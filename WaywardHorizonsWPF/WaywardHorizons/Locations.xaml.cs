@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WaywardHorizons.Characters;
 
 namespace WaywardHorizons
 {
@@ -20,13 +21,17 @@ namespace WaywardHorizons
     /// </summary>
     public partial class Locations : Page
     {
-        public Locations()
+        private Person _player { get; set; }
+
+        public Locations(Person player)
         {
-            InitializeComponent();
+            this.InitializeComponent();
+            _player = player;
         }
 
         private void Lake_Click(object sender, RoutedEventArgs e)
         {
+            int lakeId = 1;
             NavigationService.Navigate(new Uri("Lake.xaml", UriKind.Relative));
         }
 

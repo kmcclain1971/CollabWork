@@ -2,7 +2,7 @@
 
 namespace WaywardHorizons.Helpers
 {
-    class Event
+    public class Event
     {
         private Dictionary<string, Action<Person>> _choices;
 

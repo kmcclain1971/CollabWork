@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:WaywardHorizons"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Lake">
+      Title="Lake" Loaded="Page_Loaded">
 
     <Grid>
         <Grid.Background>
@@ -21,7 +21,7 @@
             <TextBlock.Effect>
                 <DropShadowEffect/>
             </TextBlock.Effect><Run Text="Health:"/><LineBreak/><Run Text="Supplies:"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Height="206" Margin="33,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="367" FontWeight="Bold" FontSize="14" Foreground="White">
+        <TextBlock Uid="tbEvents" HorizontalAlignment="Left" Height="206" Margin="33,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="367" FontWeight="Bold" FontSize="14" Foreground="White">
             <TextBlock.Effect>
                 <DropShadowEffect/>
             </TextBlock.Effect><Run Text="Event Text Here..."/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="Enter Choice Below..."/></TextBlock>

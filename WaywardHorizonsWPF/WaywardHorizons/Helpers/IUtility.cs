@@ -3,7 +3,7 @@ using WaywardHorizons.Environment;
 
 namespace WaywardHorizons.Helpers
 {
-    internal interface IUtility
+    public interface IUtility
     {
         void Clear();
         List<Location> GenerateLocations();

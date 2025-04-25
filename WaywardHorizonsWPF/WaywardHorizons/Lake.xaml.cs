@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WaywardHorizons.Characters;
+using WaywardHorizons.Environment;
 
 namespace WaywardHorizons
 {
@@ -20,9 +22,14 @@ namespace WaywardHorizons
     /// </summary>
     public partial class Lake : Page
     {
-        public Lake()
+        private Person _player { get; set; }
+        private int _locationId { get; set; }
+
+        public Lake(Person player, int LocationId)
         {
             InitializeComponent();
+            _player = player;
+            _locationId = LocationId;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -33,6 +40,13 @@ namespace WaywardHorizons
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
            
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            var location = new Location();
+            location.LocationId = _locationId;
+            location.Explore(_player);
         }
     }
 }

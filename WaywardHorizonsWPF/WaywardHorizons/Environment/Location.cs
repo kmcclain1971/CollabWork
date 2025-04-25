@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WaywardHorizons.Environment
 {
-    internal class Location
+    public class Location
     {
         private readonly IUtility _utility = new Utility();
         private List<Event> _events;
@@ -21,11 +21,11 @@ namespace WaywardHorizons.Environment
 
         public void Explore(Person adventurer)
         {
-            _utility.Clear();
+            //_utility.Clear();
             // write the header
-            _utility.WriteHeader(adventurer);
+            //_utility.WriteHeader(adventurer);
 
-            _utility.Print("What would you like to do?");
+            //_utility.Print("What would you like to do?");
 
             // the _events have been populated during the setup of each Location
             foreach (var gameEvent in _events)
@@ -39,7 +39,7 @@ namespace WaywardHorizons.Environment
                     return;
                 }
             }
-            Console.WriteLine("Congratulations you've seen all that this location has to offer! \nReturn to the main menu to explore the other locations!");
+            Console.WriteLine("Congratulations you've seen all that this location has to offer! \nReturn to the location map to explore the other locations!");
         }
 
         public string GetNPCList()

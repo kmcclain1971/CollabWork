@@ -6,7 +6,7 @@ using System.IO;
 
 namespace WaywardHorizons.Helpers
 {
-    internal class Utility : IUtility
+    public class Utility : IUtility
     {
         private readonly ILogger<Utility> _logger;
 

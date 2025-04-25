@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml.Linq;
+using WaywardHorizons.Characters;
 
 namespace WaywardHorizons
 {
@@ -43,20 +45,22 @@ namespace WaywardHorizons
 
         private void ProcessPlayerInput()
         {
+            var player = new Person();
             if (string.IsNullOrEmpty(txtName.Text))
             {
-                window.ThePlayer.PlayerName = "Player";
+                player.PlayerName = "Player";
             }
             else
             {
                 //playerinput
-                window.ThePlayer.PlayerName = txtName.Text;
+                player.PlayerName = txtName.Text;
             }
 
             //swap pages from menu to location
-            //template:
-            //NavigationService.Navigate(new Uri("", UriKind.Relative));
-            NavigationService.Navigate(new Uri("Locations.xaml", UriKind.Relative));
+
+            //Locations locationPage = new Locations(player);
+            //locationPage.Show();
+            NavigationService.Navigate(new Locations(player));
         }
 
     }
