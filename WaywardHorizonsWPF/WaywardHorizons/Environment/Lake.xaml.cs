@@ -47,5 +47,16 @@ namespace WaywardHorizons
             var util = new Utility();
             return util.GenerateEvents(_locationId);
         }
+
+        private void lbEvents_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // this will perform the action and load new stuff
+            tbEvent.Text = lbEvents.SelectedItem.ToString();
+        }
+
+        private void ChoiceButton_Click(object sender, RoutedEventArgs e)
+        {
+            // this will perform the action and load new stuff
+        }
     }
 }

@@ -26,10 +26,13 @@
                 <DropShadowEffect/>
             </TextBlock.Effect><Run Text="Enter Choice Below..."/>
         </TextBlock>
-        <ListBox ItemsSource="{Binding LocationEvents}" x:Name="lbEvents" Margin="37,138,578,225" Background="{x:Null}" Foreground="White">
+        <ListBox ItemsSource="{Binding LocationEvents}" x:Name="lbEvents" Margin="37,138,578,225" Background="{x:Null}" Foreground="White" SelectionChanged="lbEvents_SelectionChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding ChoiceText}" />
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding ChoiceText}" />
+                        <Button Command="{Binding ActionToTake}" Content="{Binding ChoiceText}" Click="ChoiceButton_Click" />
+                    </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>

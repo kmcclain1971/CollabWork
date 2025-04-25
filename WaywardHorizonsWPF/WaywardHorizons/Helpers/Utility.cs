@@ -60,8 +60,8 @@ namespace WaywardHorizons.Helpers
             {
                     new Event(locationId,"You encounter a river crossing. Do you attempt to cross?",
                     [
-                            new EventChoice() { ChoiceText = "Cross" },
-                            new EventChoice() { ChoiceText = "Wait" }
+                            new EventChoice() { ChoiceText = "Cross", ActionToTake = p => p.UpdateStatus(-10, 0) },
+                            new EventChoice() { ChoiceText = "Wait", ActionToTake = p => p.UpdateStatus(0, -10)}
                     ])
                     //new Event(locationId,"A sudden storm destroys your shelter. Do you search for a new shelter or try to rebuild?", new Dictionary<string, Action<Person>>
                     //{
