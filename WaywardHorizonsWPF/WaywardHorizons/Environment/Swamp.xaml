@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Swamp of Scarlet Rot.png"/>
+            <ImageBrush ImageSource="/images/Swamp of Scarlet Rot.png"/>
         </Grid.Background>
         <TextBlock HorizontalAlignment="Left" Margin="24,17,0,0" TextWrapping="Wrap" Text="Swamp of scarlet rot" VerticalAlignment="Top" FontSize="48" FontFamily="Algerian" Foreground="#FFFDFDFD">
             <TextBlock.Effect>

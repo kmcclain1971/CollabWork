@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/LakeLava.png"/>
+            <ImageBrush ImageSource="/images/LakeLava.png"/>
         </Grid.Background>
         <TextBlock HorizontalAlignment="Left" Margin="24,17,0,0" TextWrapping="Wrap" Text="Lake Lava" VerticalAlignment="Top" FontSize="48" FontFamily="Algerian" Foreground="White">
             <TextBlock.Effect>

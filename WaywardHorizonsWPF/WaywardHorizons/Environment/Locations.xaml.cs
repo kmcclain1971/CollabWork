@@ -32,27 +32,27 @@ namespace WaywardHorizons
         private void Lake_Click(object sender, RoutedEventArgs e)
         {
             int lakeId = 1;
-            NavigationService.Navigate(new Uri("Lake.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Lake(_player, lakeId));
         }
 
         private void Forest_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("Forest.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Forest());
         }
 
         private void Swamp_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("Swamp.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Swamp());
         }
 
         private void Grove_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("Grove.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Grove());
         }
 
         private void Desert_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("Desert.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Desert());
         }
     }
 }

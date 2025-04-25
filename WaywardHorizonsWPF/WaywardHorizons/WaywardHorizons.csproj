@@ -9,21 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Desert Valley.png" />
-    <None Remove="dt_arcane_icon_512.png" />
-    <None Remove="Forest of Winterfell.png" />
     <None Remove="images\Desert Valley.png" />
+    <None Remove="images\dt_arcane_icon_512.png" />
     <None Remove="images\Forest of Winterfell.png" />
     <None Remove="images\LakeLava.png" />
     <None Remove="images\MAP.png" />
+    <None Remove="images\parchment.jpg" />
     <None Remove="images\Swamp of Scarlet Rot.png" />
     <None Remove="images\The Grove.png" />
-    <None Remove="LakeLava.png" />
-    <None Remove="MAP.png" />
-    <None Remove="parchment.jpg" />
-    <None Remove="Swamp of Scarlet Rot.png" />
-    <None Remove="The Grove.png" />
-    <None Remove="Wood Sign.jpg" />
+    <None Remove="images\Wood Sign.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,10 +25,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Desert Valley.png" />
-    <Resource Include="dt_arcane_icon_512.png" />
-    <Resource Include="Forest of Winterfell.png" />
-    <Resource Include="images\Desert Valley.png" />
+    <Resource Include="images\Desert Valley.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\dt_arcane_icon_512.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="images\Forest of Winterfell.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -44,25 +40,22 @@
     <Resource Include="images\MAP.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="images\parchment.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="images\Swamp of Scarlet Rot.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="images\The Grove.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="LakeLava.png" />
-    <Resource Include="MAP.png" />
-    <Resource Include="parchment.jpg" />
-    <Resource Include="Swamp of Scarlet Rot.png" />
-    <Resource Include="The Grove.png" />
-    <Resource Include="Wood Sign.jpg" />
+    <Resource Include="images\Wood Sign.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
     <None Update="images\Dessert Valley.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="images\dt_arcane_icon_512.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

@@ -48,5 +48,11 @@ namespace WaywardHorizons
             location.LocationId = _locationId;
             location.Explore(_player);
         }
+
+
+        private void GenerateLakeEvents()
+        {
+
+        }
     }
 }

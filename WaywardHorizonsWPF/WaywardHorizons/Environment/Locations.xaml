@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/MAP.png"/>
+            <ImageBrush ImageSource="/images/MAP.png"/>
         </Grid.Background>
         <Grid HorizontalAlignment="Center" Height="450" VerticalAlignment="Center" Width="800">
             <TextBlock HorizontalAlignment="Center" Margin="0,11,0,0" TextWrapping="Wrap" Text="Locations" VerticalAlignment="Top" Height="74" Width="278" FontSize="48" FontFamily="Algerian" TextAlignment="Center" Foreground="White">

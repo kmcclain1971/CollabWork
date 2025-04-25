@@ -10,7 +10,7 @@
 
     <Grid KeyDown="Grid_KeyDown">
         <Grid.Background>
-            <ImageBrush Opacity="1" ImageSource="/parchment.jpg"/>
+            <ImageBrush Opacity="1" ImageSource="/images/parchment.jpg"/>
         </Grid.Background>
         <Grid HorizontalAlignment="Left" Height="388" VerticalAlignment="Top" Width="734">
             <Label Content="WAYWARD HORIZONS" HorizontalAlignment="Left" VerticalAlignment="Top" Height="59" Width="374" Uid="mainLabel" FontSize="36" FontFamily="Algerian" Foreground="White">

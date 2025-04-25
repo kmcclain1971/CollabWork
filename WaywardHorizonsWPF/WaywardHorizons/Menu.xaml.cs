@@ -45,21 +45,15 @@ namespace WaywardHorizons
 
         private void ProcessPlayerInput()
         {
-            var player = new Person();
-            if (string.IsNullOrEmpty(txtName.Text))
+            // take the user input and create the instance of the Person class for the player
+            var player = new Person()
             {
-                player.PlayerName = "Player";
-            }
-            else
-            {
-                //playerinput
-                player.PlayerName = txtName.Text;
-            }
+                // The below is an example of using the ternary operator (https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/conditional-operator)
+                // for creating succinct if/then logic
+                PlayerName = !string.IsNullOrEmpty(txtName.Text) ? txtName.Text : "Generic Player"
+            };
 
             //swap pages from menu to location
-
-            //Locations locationPage = new Locations(player);
-            //locationPage.Show();
             NavigationService.Navigate(new Locations(player));
         }
 
