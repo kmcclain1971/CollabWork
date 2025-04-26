@@ -18,9 +18,9 @@ namespace WaywardHorizons
     /// <summary>
     /// Interaction logic for Grove.xaml
     /// </summary>
-    public partial class Grove : Page
+    public partial class GroveViewModel : Page
     {
-        public Grove()
+        public GroveViewModel()
         {
             InitializeComponent();
         }

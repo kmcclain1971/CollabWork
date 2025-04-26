@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace WaywardHorizons
 {
     /// <summary>
-    /// Interaction logic for Desert.xaml
+    /// Interaction logic for Swamp.xaml
     /// </summary>
-    public partial class Desert : Page
+    public partial class SwampViewModel : Page
     {
-        public Desert()
+        public SwampViewModel()
         {
             InitializeComponent();
         }
@@ -29,5 +29,7 @@ namespace WaywardHorizons
         {
 
         }
+
+        
     }
 }

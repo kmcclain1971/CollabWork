@@ -1,4 +1,4 @@
-﻿<Page x:Class="WaywardHorizons.Desert"
+﻿<Page x:Class="WaywardHorizons.DesertViewModel"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Desert Valley.png"/>
+            <ImageBrush ImageSource="/images/Desert Valley.png"/>
         </Grid.Background>
         <TextBlock HorizontalAlignment="Left" Margin="24,17,0,0" TextWrapping="Wrap" Text="desert valley" VerticalAlignment="Top" FontSize="48" FontFamily="Algerian" Foreground="White">
             <TextBlock.Effect>

@@ -9,13 +9,13 @@ namespace WaywardHorizons
     /// <summary>
     /// Interaction logic for Lake.xaml
     /// </summary>
-    public partial class Lake : Page
+    public partial class LakeViewModel : Page
     {
         private Person _player { get; set; }
         private int _locationId { get; set; }
         public List<Event> LocationEvents { get; set; }
 
-        public Lake(Person player, int LocationId)
+        public LakeViewModel(Person player, int LocationId)
         {
             InitializeComponent();
             _player = player;

@@ -19,11 +19,11 @@ namespace WaywardHorizons
     /// <summary>
     /// Interaction logic for Locations.xaml
     /// </summary>
-    public partial class Locations : Page
+    public partial class LocationsViewModel : Page
     {
         private Person _player { get; set; }
 
-        public Locations(Person player)
+        public LocationsViewModel(Person player)
         {
             this.InitializeComponent();
             _player = player;
@@ -32,27 +32,27 @@ namespace WaywardHorizons
         private void Lake_Click(object sender, RoutedEventArgs e)
         {
             int lakeId = 1;
-            NavigationService.Navigate(new Lake(_player, lakeId));
+            NavigationService.Navigate(new LakeViewModel(_player, lakeId));
         }
 
         private void Forest_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Forest());
+            NavigationService.Navigate(new ForestViewModel());
         }
 
         private void Swamp_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Swamp());
+            NavigationService.Navigate(new SwampViewModel());
         }
 
         private void Grove_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Grove());
+            NavigationService.Navigate(new GroveViewModel());
         }
 
         private void Desert_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Desert());
+            NavigationService.Navigate(new DesertViewModel());
         }
     }
 }
