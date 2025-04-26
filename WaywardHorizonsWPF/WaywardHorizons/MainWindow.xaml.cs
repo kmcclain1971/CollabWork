@@ -1,5 +1,5 @@
 ﻿using System.Windows;
-using WaywardHorizons.Helpers;
+using WaywardHorizons.Services;
 using WaywardHorizons.Interfaces;
 
 namespace WaywardHorizons

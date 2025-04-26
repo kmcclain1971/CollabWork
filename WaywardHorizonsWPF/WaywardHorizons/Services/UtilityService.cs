@@ -1,9 +1,12 @@
 ﻿using Microsoft.Extensions.Logging;
 using System.IO;
 using System.Text;
+using System.Windows.Controls;
 using WaywardHorizons.Characters;
+using WaywardHorizons.Helpers;
+using WaywardHorizons.Interfaces;
 
-namespace WaywardHorizons.Helpers
+namespace WaywardHorizons.Services
 {
     public class UtilityService : IUtilityService
     {
@@ -57,8 +60,8 @@ namespace WaywardHorizons.Helpers
             {
                     new Event(locationId,"You encounter a river crossing. Do you attempt to cross?",
                     [
-                            new EventChoice() { ChoiceText = "Cross", ActionToTake = p => p.UpdateStatus(-10, 0) },
-                            new EventChoice() { ChoiceText = "Wait", ActionToTake = p => p.UpdateStatus(0, -10)}
+                            new EventChoice() { ChoiceText = "- Cross", ActionText = "Health: -10", ActionToTake = p => p.UpdateStatus(-10, 0) },
+                            new EventChoice() { ChoiceText = "- Wait", ActionText = "Supplies: -10", ActionToTake = p => p.UpdateStatus(0, -10)}
                     ])
                     //new Event(locationId,"A sudden storm destroys your shelter. Do you search for a new shelter or try to rebuild?", new Dictionary<string, Action<Person>>
                     //{

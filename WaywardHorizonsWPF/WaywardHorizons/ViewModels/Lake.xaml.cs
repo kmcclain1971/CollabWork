@@ -2,6 +2,7 @@
 using System.Windows.Controls;
 using WaywardHorizons.Characters;
 using WaywardHorizons.Helpers;
+using WaywardHorizons.Interfaces;
 
 namespace WaywardHorizons
 {
@@ -11,17 +12,19 @@ namespace WaywardHorizons
     public partial class LakeViewModel : Page
     {
         private readonly IUtilityService _utilityService;
-        private Person _player { get; set; }
-        private int _locationId { get; set; }
-        public List<Event> LocationEvents { get; set; }
+        private Person _player;
+        private int _locationId;
+        private List<Event> _locationEvents;
 
         public LakeViewModel(Person player, int LocationId, IUtilityService utilityService)
         {
-            InitializeComponent();
             _player = player;
             _locationId = LocationId;
             _utilityService = utilityService;
-            LocationEvents = GenerateLakeEvents();
+            _locationEvents = _utilityService.GenerateEvents(_locationId);
+
+            InitializeComponent();
+            ShowInitialEvent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -34,30 +37,34 @@ namespace WaywardHorizons
            
         }
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
+        private void ShowInitialEvent()
         {
             // set the tbEvent text value to the first event description in the array to get started
-            tbEvent.Text = LocationEvents[0].Description.ToString();
+            tbEvent.Text = _locationEvents[0].Description.ToString();
             // give the list box our list of event actions
-            lbEvents.ItemsSource = LocationEvents[0].Choices;
+            lbEvents.ItemsSource = _locationEvents[0].Choices;
         }
 
-
-        private List<Event> GenerateLakeEvents()
-        {
-            throw new NotImplementedException();
-            //return _utilityService.GenerateEvents(_locationId);
-        }
-
+        /// <summary>
+        /// This will get the selection into an instance of EventChoice and pass that to the ParseChoice method
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lbEvents_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            // this will perform the action and load new stuff
-            tbEvent.Text = lbEvents.SelectedItem.ToString();
+            var choice = (EventChoice)lbEvents.SelectedItems[0]; // Actions are at [0]
+            ParseChoice(choice);
         }
 
-        private void ChoiceButton_Click(object sender, RoutedEventArgs e)
+        private void ParseChoice(EventChoice eventChoice)
         {
-            // this will perform the action and load new stuff
+            // show/hide stuff as necessary
+            spEventActions.Visibility = Visibility.Hidden;
+            tbActionResults.Visibility = Visibility.Visible;
+            btnContinue.Visibility = Visibility.Visible;
+
+            tbActionResults.Text += "You chose " + eventChoice.ChoiceText.Replace("- ","") + " and the following happened:\n\n";
+            tbActionResults.Text += eventChoice.ActionText.ToString();
         }
     }
 }

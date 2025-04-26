@@ -2,7 +2,7 @@
 using System.Windows.Controls;
 using System.Windows.Navigation;
 using WaywardHorizons.Characters;
-using WaywardHorizons.Helpers;
+using WaywardHorizons.Interfaces;
 
 namespace WaywardHorizons
 {

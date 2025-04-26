@@ -1,6 +1,7 @@
 ﻿using WaywardHorizons.Characters;
-using WaywardHorizons.Helpers;
+using WaywardHorizons.Interfaces;
 using System.ComponentModel.DataAnnotations;
+using WaywardHorizons.Helpers;
 
 namespace WaywardHorizons.Models
 {

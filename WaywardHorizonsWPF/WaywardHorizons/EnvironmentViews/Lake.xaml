@@ -6,38 +6,61 @@
       xmlns:local="clr-namespace:WaywardHorizons"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Lake" Loaded="Page_Loaded">
+      Title="Lake">
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*" />
+            <ColumnDefinition Width="50*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <!-- header row -->
+            <RowDefinition Height="15*"/>
+            <!-- content row -->
+            <RowDefinition Height="75*"/>
+            <!-- footer row -->
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="/images/LakeLava.png"/>
         </Grid.Background>
-        <TextBlock HorizontalAlignment="Left" Margin="24,17,0,0" TextWrapping="Wrap" Text="Lake Lava" VerticalAlignment="Top" FontSize="48" FontFamily="Algerian" Foreground="White">
+
+        <!-- header title text -->
+        <TextBlock x:Name="tbTitle" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="24,1,0,0" TextWrapping="Wrap" Text="Lake Lava" VerticalAlignment="Top" FontSize="48" FontFamily="Algerian" Foreground="White">
             <TextBlock.Effect>
                 <DropShadowEffect/>
             </TextBlock.Effect>
         </TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="586,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="169" Foreground="White" FontSize="14" FontWeight="Bold">
+        <!-- header player stats -->
+        <TextBlock x:Name="tbPlayerStats" HorizontalAlignment="Left" Margin="28,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="37" Width="169" Foreground="White" FontSize="14" FontWeight="Bold" Grid.Row="0" Grid.Column="1">
             <TextBlock.Effect>
                 <DropShadowEffect/>
-            </TextBlock.Effect><Run Text="Health:"/><LineBreak/><Run Text="Supplies:"/></TextBlock>
-        <TextBlock Name="tbEvent" HorizontalAlignment="Left" Margin="37,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="538" FontWeight="Bold" FontSize="14" Foreground="White">
-            <TextBlock.Effect>
-                <DropShadowEffect/>
-            </TextBlock.Effect><Run Text="Enter Choice Below..."/>
+            </TextBlock.Effect>
+            <Run Text="Health:"/><LineBreak/><Run Text="Supplies:"/>
         </TextBlock>
-        <ListBox ItemsSource="{Binding LocationEvents}" x:Name="lbEvents" Margin="37,138,578,225" Background="{x:Null}" Foreground="White" SelectionChanged="lbEvents_SelectionChanged">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding ChoiceText}" />
-                        <Button Command="{Binding ActionToTake}" Content="{Binding ChoiceText}" Click="ChoiceButton_Click" />
-                    </StackPanel>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
-        <TextBox HorizontalAlignment="Left" Margin="33,311,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="143" Height="34"/>
-        <Button x:Name="Submit" Content="Submit" HorizontalAlignment="Left" Margin="192,311,0,0" VerticalAlignment="Top" Height="34" Width="55" Click="Button_Click"/>
-
+        <!-- body - events and actions -->
+        <StackPanel x:Name="spEventActions" Grid.Row="1" Grid.Column="0">
+            <TextBlock x:Name="tbEvent" HorizontalAlignment="Left" Margin="37,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="433" FontWeight="Bold" FontSize="14" Foreground="White">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect>
+                <Run Text="Enter Choice Below..."/>
+            </TextBlock>
+            <ListBox x:Name="lbEvents" Width="200" Height="200" BorderThickness="0" ItemsSource="{Binding Choices}" Background="{x:Null}" Foreground="White" SelectionChanged="lbEvents_SelectionChanged" Margin="37,58,243,80">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding ChoiceText}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+        <!-- body - action results -->
+        <TextBlock x:Name="tbActionResults" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Foreground="White" Margin="28,10,0,0" Visibility="Hidden">
+            <Run Text="Results of stuff go here" />
+        </TextBlock>
+        <!-- footer -->
+        <Button x:Name="btnContinue" Content="Continue Exploring" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Height="34" Width="140" Click="Button_Click" Margin="0,1,0,0" Visibility="Hidden"/>
     </Grid>
 </Page>

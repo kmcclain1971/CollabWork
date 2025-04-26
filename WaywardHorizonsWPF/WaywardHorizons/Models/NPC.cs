@@ -1,4 +1,4 @@
-﻿using WaywardHorizons.Helpers;
+﻿using WaywardHorizons.Interfaces;
 
 namespace WaywardHorizons.Characters
 {
