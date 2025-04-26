@@ -2,6 +2,7 @@
 using System.Windows.Controls;
 using WaywardHorizons.Characters;
 using WaywardHorizons.Helpers;
+using WaywardHorizons.Interfaces;
 
 namespace WaywardHorizons
 {

@@ -1,6 +1,6 @@
 ﻿using WaywardHorizons.Characters;
 
-namespace WaywardHorizons.Helpers
+namespace WaywardHorizons.Interfaces
 {
     public interface IUtilityService
     {

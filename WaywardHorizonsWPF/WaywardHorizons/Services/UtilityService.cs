@@ -2,8 +2,10 @@
 using System.IO;
 using System.Text;
 using WaywardHorizons.Characters;
+using WaywardHorizons.Helpers;
+using WaywardHorizons.Interfaces;
 
-namespace WaywardHorizons.Helpers
+namespace WaywardHorizons.Services
 {
     public class UtilityService : IUtilityService
     {

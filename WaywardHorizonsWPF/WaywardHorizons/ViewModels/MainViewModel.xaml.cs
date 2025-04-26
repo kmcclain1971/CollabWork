@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using System.Windows;
 using System.Windows.Controls;
-using WaywardHorizons.Helpers;
+using WaywardHorizons.Services;
 using WaywardHorizons.Interfaces;
 
 namespace WaywardHorizons
