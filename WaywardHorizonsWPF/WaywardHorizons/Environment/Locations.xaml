@@ -1,0 +1,39 @@
+﻿<Page x:Class="WaywardHorizons.Locations"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WaywardHorizons"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Locations">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/images/MAP.png"/>
+        </Grid.Background>
+        <Grid HorizontalAlignment="Center" Height="450" VerticalAlignment="Center" Width="800">
+            <TextBlock HorizontalAlignment="Center" Margin="0,11,0,0" TextWrapping="Wrap" Text="Locations" VerticalAlignment="Top" Height="74" Width="278" FontSize="48" FontFamily="Algerian" TextAlignment="Center" Foreground="White">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect>
+            </TextBlock>
+            <Button x:Name="Lake" Content="Lake" HorizontalAlignment="Left" Margin="65,27,0,0" VerticalAlignment="Top" Height="132" Width="210" Opacity="0" Click="Lake_Click"/>
+            <Button x:Name="Forest" Content="Forest" HorizontalAlignment="Left" Margin="544,22,0,0" VerticalAlignment="Top" Height="132" Width="210" Click="Forest_Click" Opacity="0">
+                <Button.Effect>
+                    <BlurEffect/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="Swamp" Content="Swamp" HorizontalAlignment="Left" Margin="556,225,0,0" VerticalAlignment="Top" Height="146" Width="198" Opacity="0" Click="Swamp_Click"/>
+            <Button x:Name="Grove" Content="Grove" HorizontalAlignment="Left" VerticalAlignment="Center" Height="132" Width="242" Opacity="0" Click="Grove_Click" Margin="275,0,0,0"/>
+            <Button x:Name="Desert" Content="Desert" HorizontalAlignment="Left" Margin="52,236,0,0" VerticalAlignment="Top" Height="187" Width="175" Opacity="0" Click="Desert_Click"/>
+            <TextBlock HorizontalAlignment="Center" Margin="0,66,0,0" TextWrapping="Wrap" Text="Choose a location to explore!" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="14">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect>
+            </TextBlock>
+
+        </Grid>
+
+    </Grid>
+</Page>
