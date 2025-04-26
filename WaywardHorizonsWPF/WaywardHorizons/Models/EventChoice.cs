@@ -10,6 +10,7 @@ namespace WaywardHorizons.Helpers
     public class EventChoice
     {
         public string ChoiceText { get; set; }
+        public string ActionText { get; set; }
         public Action<Person> ActionToTake { get; set; }
     }
 }
