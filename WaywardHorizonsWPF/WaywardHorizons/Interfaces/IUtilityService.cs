@@ -1,12 +1,9 @@
 ﻿using WaywardHorizons.Characters;
-using WaywardHorizons.Environment;
 
 namespace WaywardHorizons.Helpers
 {
-    public interface IUtility
+    public interface IUtilityService
     {
-        void Clear();
-        List<Location> GenerateLocations();
         string[] GetArrayTextFromExternalFile(string path);
         string GetNextStep(int locationId);
         void GetNextStep(object locationId);
@@ -14,11 +11,7 @@ namespace WaywardHorizons.Helpers
         int GetRandomNumber(int min, int max);
         string GetStepText(string textType);
         string GetTextFromExternalFile(string path);
-        void Pause();
-        void Print(string message);
-
-        void WriteTitle();
         void WriteHeader(Person adventurer);
-        void WriteFooter();
+
     }
 }

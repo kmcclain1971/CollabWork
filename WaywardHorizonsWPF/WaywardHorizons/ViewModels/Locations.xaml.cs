@@ -1,18 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 using WaywardHorizons.Characters;
+using WaywardHorizons.Helpers;
 
 namespace WaywardHorizons
 {
@@ -21,18 +11,20 @@ namespace WaywardHorizons
     /// </summary>
     public partial class LocationsViewModel : Page
     {
+        private readonly IUtilityService _utilityService;
         private Person _player { get; set; }
 
-        public LocationsViewModel(Person player)
+        public LocationsViewModel(Person player, IUtilityService utilityService)
         {
-            this.InitializeComponent();
+            InitializeComponent();
             _player = player;
+            _utilityService = utilityService;
         }
 
         private void Lake_Click(object sender, RoutedEventArgs e)
         {
             int lakeId = 1;
-            NavigationService.Navigate(new LakeViewModel(_player, lakeId));
+            NavigationService.Navigate(new LakeViewModel(_player, lakeId, _utilityService));
         }
 
         private void Forest_Click(object sender, RoutedEventArgs e)

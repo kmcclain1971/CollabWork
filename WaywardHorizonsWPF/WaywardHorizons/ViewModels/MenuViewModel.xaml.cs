@@ -3,6 +3,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Navigation;
 using WaywardHorizons.Characters;
+using WaywardHorizons.Helpers;
 
 namespace WaywardHorizons
 {
@@ -11,9 +12,12 @@ namespace WaywardHorizons
     /// </summary>
     public partial class MenuViewModel : Page
     {
-        public MenuViewModel()
+        private readonly IUtilityService _utilityService;
+
+        public MenuViewModel(IUtilityService utilityService)
         {
             InitializeComponent();
+            _utilityService = utilityService;
         }
 
         #region Handlers
@@ -48,7 +52,7 @@ namespace WaywardHorizons
 
             // swap pages from menu to location
             // using new instance of page object instead of page Uri so we can pass items to page constructors
-            NavigationService.Navigate(new LocationsViewModel(player));
+            NavigationService.Navigate(new LocationsViewModel(player, _utilityService));
         }
 
         #endregion

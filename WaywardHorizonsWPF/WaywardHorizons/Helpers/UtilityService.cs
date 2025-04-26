@@ -1,18 +1,15 @@
-﻿using WaywardHorizons.Characters;
-using WaywardHorizons.Environment;
-using Microsoft.Extensions.Logging;
-using System.Text;
+﻿using Microsoft.Extensions.Logging;
 using System.IO;
+using System.Text;
+using WaywardHorizons.Characters;
 
 namespace WaywardHorizons.Helpers
 {
-    public class Utility : IUtility
+    public class UtilityService : IUtilityService
     {
-        private readonly ILogger<Utility> _logger;
+        private readonly ILogger<UtilityService> _logger;
 
-        public Utility() { }
-
-        public Utility(ILogger<Utility> logger)
+        public UtilityService(ILogger<UtilityService> logger)
         {
             _logger = logger;
         }
@@ -248,21 +245,6 @@ namespace WaywardHorizons.Helpers
             return null;
         }
 
-        public List<Location> GenerateLocations()
-        {
-            var locations = new List<Location>();
-            int numberLocations = GetRandomNumber(4, 5);
-
-            //5 locations
-            for (int i = 1; i <= numberLocations + 1; i++)
-            {
-                var location = GenerateLocation(i); // generates random location object
-                locations.Add(location);
-            }
-
-            return locations;
-        }
-
         public string GetNextStep(int locationId)
         {
             switch (locationId)
@@ -338,22 +320,6 @@ namespace WaywardHorizons.Helpers
         public void WriteFooter()
         {
             throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// This method now takes care of setting the LocationId value and generating events for the location
-        /// </summary>
-        /// <param name="locationId"></param>
-        /// <returns></returns>
-        private Location GenerateLocation(int locationId)
-        {
-            var location = new Location();
-            location.LocationId = locationId;
-            location.LocationName = GenerateRandomLocationName();
-            // create the events for the location
-            //location.GenerateEvents(locationId); // this method call sets the _events list on the Location object
-
-            return location;
         }
 
         private string GenerateRandomLocationName()
