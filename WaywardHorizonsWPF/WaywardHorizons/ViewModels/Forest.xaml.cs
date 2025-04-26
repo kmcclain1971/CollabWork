@@ -18,9 +18,9 @@ namespace WaywardHorizons
     /// <summary>
     /// Interaction logic for Forest.xaml
     /// </summary>
-    public partial class Forest : Page
+    public partial class ForestViewModel : Page
     {
-        public Forest()
+        public ForestViewModel()
         {
             InitializeComponent();
         }

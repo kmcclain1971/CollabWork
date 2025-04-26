@@ -1,7 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using WaywardHorizons.Characters;
-using WaywardHorizons.Environment;
 using WaywardHorizons.Helpers;
 
 namespace WaywardHorizons
@@ -9,17 +8,19 @@ namespace WaywardHorizons
     /// <summary>
     /// Interaction logic for Lake.xaml
     /// </summary>
-    public partial class Lake : Page
+    public partial class LakeViewModel : Page
     {
+        private readonly IUtilityService _utilityService;
         private Person _player { get; set; }
         private int _locationId { get; set; }
         public List<Event> LocationEvents { get; set; }
 
-        public Lake(Person player, int LocationId)
+        public LakeViewModel(Person player, int LocationId, IUtilityService utilityService)
         {
             InitializeComponent();
             _player = player;
             _locationId = LocationId;
+            _utilityService = utilityService;
             LocationEvents = GenerateLakeEvents();
         }
 
@@ -44,8 +45,8 @@ namespace WaywardHorizons
 
         private List<Event> GenerateLakeEvents()
         {
-            var util = new Utility();
-            return util.GenerateEvents(_locationId);
+            throw new NotImplementedException();
+            //return _utilityService.GenerateEvents(_locationId);
         }
 
         private void lbEvents_SelectionChanged(object sender, SelectionChangedEventArgs e)

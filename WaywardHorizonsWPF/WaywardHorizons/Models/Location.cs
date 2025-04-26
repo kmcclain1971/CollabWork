@@ -2,11 +2,11 @@
 using WaywardHorizons.Helpers;
 using System.ComponentModel.DataAnnotations;
 
-namespace WaywardHorizons.Environment
+namespace WaywardHorizons.Models
 {
     public class Location
     {
-        private readonly IUtility _utility = new Utility();
+        private readonly IUtilityService _utility;
         private List<Event> _events;
 
         [Required] public int LocationId { get; set; }
@@ -14,9 +14,9 @@ namespace WaywardHorizons.Environment
         public List<Person>? People { get; set; }
         public List<NPC>? NPCs { get; set; }
 
-        public Location()
+        public Location(IUtilityService utility)
         {
-            
+            _utility = utility;
         }
 
         public void Explore(Person adventurer)
@@ -73,7 +73,7 @@ namespace WaywardHorizons.Environment
 
             for (int i = 0; i <= numbernpcs; i++)
             {
-                var npc = new NPC(); // generate NPC object
+                var npc = new NPC(_utility); // generate NPC object
                 npcList.Add(npc);
             }
 

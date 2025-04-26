@@ -18,9 +18,9 @@ namespace WaywardHorizons
     /// <summary>
     /// Interaction logic for Swamp.xaml
     /// </summary>
-    public partial class Swamp : Page
+    public partial class SwampViewModel : Page
     {
-        public Swamp()
+        public SwampViewModel()
         {
             InitializeComponent();
         }

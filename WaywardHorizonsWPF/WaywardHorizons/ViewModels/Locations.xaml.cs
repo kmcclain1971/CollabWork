@@ -1,58 +1,50 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 using WaywardHorizons.Characters;
+using WaywardHorizons.Helpers;
 
 namespace WaywardHorizons
 {
     /// <summary>
     /// Interaction logic for Locations.xaml
     /// </summary>
-    public partial class Locations : Page
+    public partial class LocationsViewModel : Page
     {
+        private readonly IUtilityService _utilityService;
         private Person _player { get; set; }
 
-        public Locations(Person player)
+        public LocationsViewModel(Person player, IUtilityService utilityService)
         {
-            this.InitializeComponent();
+            InitializeComponent();
             _player = player;
+            _utilityService = utilityService;
         }
 
         private void Lake_Click(object sender, RoutedEventArgs e)
         {
             int lakeId = 1;
-            NavigationService.Navigate(new Lake(_player, lakeId));
+            NavigationService.Navigate(new LakeViewModel(_player, lakeId, _utilityService));
         }
 
         private void Forest_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Forest());
+            NavigationService.Navigate(new ForestViewModel());
         }
 
         private void Swamp_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Swamp());
+            NavigationService.Navigate(new SwampViewModel());
         }
 
         private void Grove_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Grove());
+            NavigationService.Navigate(new GroveViewModel());
         }
 
         private void Desert_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Desert());
+            NavigationService.Navigate(new DesertViewModel());
         }
     }
 }
