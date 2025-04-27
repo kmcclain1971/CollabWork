@@ -62,144 +62,154 @@ namespace WaywardHorizons.Services
                     [
                             new EventChoice() { ChoiceText = "- Cross", ActionText = "Health: -10", ActionToTake = p => p.UpdateStatus(-10, 0) },
                             new EventChoice() { ChoiceText = "- Wait", ActionText = "Supplies: -10", ActionToTake = p => p.UpdateStatus(0, -10)}
-                    ])
-                    //new Event(locationId,"A sudden storm destroys your shelter. Do you search for a new shelter or try to rebuild?", new Dictionary<string, Action<Person>>
-                    //{
-                    //    {"Search for new Shelter", p => p.UpdateStatus(-10, 0)},
-                    //    {"Rebuild", p => p.UpdateStatus(0, -10)},
-                    //}),
-                    //new Event(locationId,"A traveler offers to join your group, but they need supplies. Do you accept them?", new Dictionary<string, Action<Person>>
-                    //{
-                    //    {"Accept", p => p.UpdateStatus(0, -15)},
-                    //    {"Decline", p => p.UpdateStatus(0, 0)},
-                    //}),
-                    //new Event(locationId,"You find a berry bush. Do you risk eating the berries?", new Dictionary<string, Action<Person>>
-                    //{
-                    //    {"Eat", p => p.UpdateStatus(-10, +20)},
-                    //    {"Ignore", p => p.UpdateStatus(0, 0)},
-                    //}),
-                    //new Event(locationId,"A snake bites you! Do you try to suck the poison out or seek help?", new Dictionary<string, Action<Person>>
-                    //{
-                    //    {"Suck the Poison", p => p.UpdateStatus(-25, 0)},
-                    //    {"Seek Help", p => p.UpdateStatus(-15, -10)},
-                    //})
+                    ]),
+                    new Event(locationId,"A sudden storm destroys your shelter. Do you search for a new shelter or try to rebuild?",
+                    [
+                            new EventChoice() { ChoiceText = "- Search for new Shelter", ActionText = "Health: -10", ActionToTake = p => p.UpdateStatus(-10, 0) },
+                            new EventChoice() { ChoiceText = "- Rebuild", ActionText = "Supplies: -10", ActionToTake = p => p.UpdateStatus(0, -10)}
+                    ]),
+                     new Event(locationId,"A traveler offers to join your group, but they need supplies. Do you accept them??",
+                    [
+                            new EventChoice() { ChoiceText = "- Accept", ActionText = "Health: -0", ActionToTake = p => p.UpdateStatus(-0, 0) },
+                            new EventChoice() { ChoiceText = "- Decline", ActionText = "Supplies: -15", ActionToTake = p => p.UpdateStatus(0, -15)}
+                    ]),
+                     new Event(locationId,"You find a berry bush. Do you risk eating the berries?",
+                    [
+                            new EventChoice() { ChoiceText = "- Eat", ActionText = "Health: -20", ActionToTake = p => p.UpdateStatus(-20, 0) },
+                            new EventChoice() { ChoiceText = "- Ignore", ActionText = "Supplies: -10", ActionToTake = p => p.UpdateStatus(0, -10)}
+                    ]),
+                    new Event(locationId,"A snake bites you! Do you try to suck the poison out or seek help?",
+                    [
+                            new EventChoice() { ChoiceText = "- Suck the Poison", ActionText = "Health: -20", ActionToTake = p => p.UpdateStatus(-20, 0) },
+                            new EventChoice() { ChoiceText = "- Seek Help", ActionText = "Supplies: -30", ActionToTake = p => p.UpdateStatus(0, -30)}
+                    ]),
+
                 };
 
             var setForest = new List<Event>
-                {
-                    //new Event(locationId,"You encounter a group of thieving goblins demanding supplies from your group. Do you fight the group or meet their demands?", new Dictionary<string, Action<Person>>
-                    //{
-                    //    {"Fight", p => p.UpdateStatus(-40, 0)},
-                    //    {"Meet Demands", p => p.UpdateStatus(0, -20)},
-                    //}),
-                    //new Event(locationId,"You find an abandoned campsite. Do you stop and look around or continue your journey?", new Dictionary<string, Action<Person>>
-                    //{
-                    //    {"Stop and Look", p => p.UpdateStatus(0, +10)},
-                    //    {"Continue", p => p.UpdateStatus(0, -10)},
-                    //}),
-                    //new Event(locationId,"A wandering trader offers you healing potions in exhange for supplies. Do you trade with them?", new Dictionary<string, Action<Person>>
-                    //{
-                    //    {"Trade", p => p.UpdateStatus(+15, -15)},
-                    //    {"Decline", p => p.UpdateStatus(0, 0)},
-                    //}),
-                    //new Event(locationId,"A dragon appears! Do you fight the dragon or Flee?", new Dictionary<string, Action<Person>>
-                    //{
-                    //    {"Fight", p => p.UpdateStatus(-100, 0)},
-                    //    {"Flee", p => p.UpdateStatus(0, -10)},
-                    //}),
-                    //new Event(locationId,"A spider bites you! Do you try to suck the poison out or seek help?", new Dictionary<string, Action<Person>>
-                    //{
-                    //    {"Suck the Poison", p => p.UpdateStatus(-25, 0)},
-                    //    {"Seek Help", p => p.UpdateStatus(-15, -10)},
-                    //})
-                };
+            {
+                 new Event(locationId,"You encounter a group of thieving goblins demanding supplies from your group. Do you fight the group or meet their demands?",
+                    [
+                            new EventChoice() { ChoiceText = "- Fight", ActionText = "Health: -40", ActionToTake = p => p.UpdateStatus(-10, 0) },
+                            new EventChoice() { ChoiceText = "- Meet Demands", ActionText = "Supplies: -20", ActionToTake = p => p.UpdateStatus(0, -20)}
+                    ]),
+                 new Event(locationId,"\"You find an abandoned campsite. Do you stop and look around or continue your journey?\"",
+                    [
+                            new EventChoice() { ChoiceText = "- Stop and Look", ActionText = "Health: -0", ActionToTake = p => p.UpdateStatus(-0, 0) },
+                            new EventChoice() { ChoiceText = "- Continue", ActionText = "Supplies: -20", ActionToTake = p => p.UpdateStatus(0, -20)}
+                    ]),
+                 new Event(locationId,"A wandering trader offers you healing potions in exhange for supplies. Do you trade with them?",
+                    [
+                            new EventChoice() { ChoiceText = "- Ignore", ActionText = "Health: -0", ActionToTake = p => p.UpdateStatus(-0, 0) },
+                            new EventChoice() { ChoiceText = "- Trade", ActionText = "Supplies: -10", ActionToTake = p => p.UpdateStatus(0, -10)}
+                    ]),
+                 new Event(locationId,"A dragon appears! Do you fight the dragon or Flee?",
+                    [
+                            new EventChoice() { ChoiceText = "- Fight", ActionText = "Health: -100", ActionToTake = p => p.UpdateStatus(-100, 0) },
+                            new EventChoice() { ChoiceText = "- Flee", ActionText = "Supplies: -10", ActionToTake = p => p.UpdateStatus(0, -10)}
+                    ]),
+                 new Event(locationId,"A spider bites you! Do you try to suck the poison out or seek help?",
+                    [
+                            new EventChoice() { ChoiceText = "- Suck the Poison", ActionText = "Health: -25", ActionToTake = p => p.UpdateStatus(-25, 0) },
+                            new EventChoice() { ChoiceText = "- Seek Help", ActionText = "Supplies: -25", ActionToTake = p => p.UpdateStatus(0, -25)}
+                    ]),
+
+            };
 
             var setDesert = new List<Event>
-                {
-                    //new Event(locationId,"You encounter a dungeon. Do you attempt to explore?", new Dictionary<string, Action<Person>>
-                    //{
-                    //    {"Explore", p => p.UpdateStatus(-20, 0)},
-                    //    {"Continue", p => p.UpdateStatus(0, -10)},
-                    //}),
-                    //new Event(locationId,"You see a mystical griffin! Would you like to hunt it or leave it be?", new Dictionary<string, Action<Person>>
-                    //{
-                    //    {"Hunt", p => p.UpdateStatus(-50, -30)},
-                    //    {"Leave it be", p => p.UpdateStatus(0, -10)},
-                    //}),
-                    //new Event(locationId,"You encounter a mysterious merchant. Do you purchase their wares?", new Dictionary<string, Action<Person>>
-                    //{
-                    //    {"Purchase", p => p.UpdateStatus(-15, +10)},
-                    //    {"Decline", p => p.UpdateStatus(0, 0)},
-                    //}),
-                    //new Event(locationId,"A wild wolf approaches! Do you fight or try to scare it away?", new Dictionary<string, Action<Person>>
-                    //{
-                    //    {"Fight", p => p.UpdateStatus(-20, +15)},
-                    //    {"Scare it away", p => p.UpdateStatus(-10, 0)},
-                    //}),
-                    //new Event(locationId,"A dense fog engulfs your surroundings. Do you press forward or wait it out?", new Dictionary<string, Action<Person>>
-                    //{
-                    //    {"Press forward", p => p.UpdateStatus(-10, -10)},
-                    //    {"Wait it out", p => p.UpdateStatus(0, 0)},
-                    //})
-                };
+            {
+                new Event(locationId,"You encounter a dungeon. Do you attempt to explore?",
+                    [
+                            new EventChoice() { ChoiceText = "- Explore", ActionText = "Health: -20", ActionToTake = p => p.UpdateStatus(-20, 0) },
+                            new EventChoice() { ChoiceText = "- Continue", ActionText = "Supplies: -10", ActionToTake = p => p.UpdateStatus(0, -10)}
+                    ]),
+                new Event(locationId,"You see a mystical griffin! Would you like to hunt it or leave it be?",
+                    [
+                            new EventChoice() { ChoiceText = "- Hunt", ActionText = "Health: -70", ActionToTake = p => p.UpdateStatus(-70, 0) },
+                            new EventChoice() { ChoiceText = "- Leave it be", ActionText = "Supplies: -10", ActionToTake = p => p.UpdateStatus(0, -10)}
+                    ]),
+                new Event(locationId,"You encounter a mysterious merchant. Do you purchase their wares?",
+                    [
+                            new EventChoice() { ChoiceText = "- Decline", ActionText = "Health: -0", ActionToTake = p => p.UpdateStatus(-0, 0) },
+                            new EventChoice() { ChoiceText = "- Purchase", ActionText = "Supplies: +40", ActionToTake = p => p.UpdateStatus(0, +40)}
+                    ]),
+                new Event(locationId,"A wild wolf approaches! Do you fight or try to scare it away?",
+                    [
+                            new EventChoice() { ChoiceText = "- Fight", ActionText = "Health: -20", ActionToTake = p => p.UpdateStatus(-20, 0) },
+                            new EventChoice() { ChoiceText = "- Scare it away", ActionText = "Supplies: -0", ActionToTake = p => p.UpdateStatus(0, -0)}
+                    ]),
+                new Event(locationId,"You encounter a mysterious merchant. Do you purchase their wares?",
+                    [
+                            new EventChoice() { ChoiceText = "- Decline", ActionText = "Health: -0", ActionToTake = p => p.UpdateStatus(-0, 0) },
+                            new EventChoice() { ChoiceText = "- Purchase", ActionText = "Supplies: +40", ActionToTake = p => p.UpdateStatus(0, +40)}
+                    ]),
+                new Event(locationId,"A dense fog engulfs your surroundings. Do you press forward or wait it out?",
+                    [
+                            new EventChoice() { ChoiceText = "- Press forward", ActionText = "Health: -50", ActionToTake = p => p.UpdateStatus(-50, 0) },
+                            new EventChoice() { ChoiceText = "- Wait it out", ActionText = "Supplies: -0", ActionToTake = p => p.UpdateStatus(0, -0)}
+                    ]),
+
+            };
 
             var setGrove = new List<Event>
-                {
-                    //new Event(locationId,"A raging river blocks your path. Do you try to cross or find another way?", new Dictionary<string, Action<Person>>
-                    //{
-                    //    {"Cross", p => p.UpdateStatus(-30, 0)},
-                    //    {"Find another way", p => p.UpdateStatus(0, -15)},
-                    //}),
-                    //new Event(locationId, "A rickety bridge spans a deep chasm. Do you risk crossing it?", new Dictionary<string, Action<Person>>
-                    //{
-                    //    {"Cross", p => p.UpdateStatus(-100, -100)},
-                    //    {"Turn back", p => p.UpdateStatus(0, -10)},
-                    //}),
-                    //new Event(locationId,"You discover a treasure chest. Do you open it or leave it untouched", new Dictionary<string, Action<Person>>
-                    //{
-                    //    {"Open", p => p.UpdateStatus(-10, +50)},
-                    //    {"Leave it", p => p.UpdateStatus(0, 0)},
-                    //}),
-                    //new Event(locationId,"A rouge offers you a rare map in exhange for some food. Do you accept", new Dictionary<string, Action<Person>>
-                    //{
-                    //    {"Accept", p => p.UpdateStatus(-0, -15)},
-                    //    {"Decline", p => p.UpdateStatus(0, 0)},
-                    //}),
-                    //new Event(locationId,"An enchanted tree offers you a blessing--for a sacrifice. Do you accept?", new Dictionary<string, Action<Person>>
-                    //{
-                    //    {"Accept", p => p.UpdateStatus(-25, +50)},
-                    //    {"Decline", p => p.UpdateStatus(0, -10)},
-                    //})
-                };
+            {
+                new Event(locationId,"A raging river blocks your path. Do you try to cross or find another way?",
+                    [
+                            new EventChoice() { ChoiceText = "- Cross", ActionText = "Health: -30", ActionToTake = p => p.UpdateStatus(-30, 0) },
+                            new EventChoice() { ChoiceText = "- Find another way", ActionText = "Supplies: -20", ActionToTake = p => p.UpdateStatus(0, -20)}
+                    ]),
+                new Event(locationId,"A rickety bridge spans a deep chasm. Do you risk crossing it?",
+                    [
+                            new EventChoice() { ChoiceText = "- Cross", ActionText = "Health: -100", ActionToTake = p => p.UpdateStatus(-100, 0) },
+                            new EventChoice() { ChoiceText = "- Turn back", ActionText = "Supplies: -10", ActionToTake = p => p.UpdateStatus(0, -10)}
+                    ]),
+                new Event(locationId,"You discover a treasure chest. Do you open it or leave it untouched",
+                    [
+                            new EventChoice() { ChoiceText = "- Open", ActionText = "Health: -10", ActionToTake = p => p.UpdateStatus(-10, +30) },
+                            new EventChoice() { ChoiceText = "- Leave it", ActionText = "Supplies: -0", ActionToTake = p => p.UpdateStatus(0, -10)}
+                    ]),
+                new Event(locationId,"A rouge offers you a rare map in exhange for some food. Do you accept",
+                    [
+                            new EventChoice() { ChoiceText = "- Accept", ActionText = "Health: -0", ActionToTake = p => p.UpdateStatus(-0, -10) },
+                            new EventChoice() { ChoiceText = "- Decline", ActionText = "Supplies: -10", ActionToTake = p => p.UpdateStatus(0, -10)}
+                    ]),
+                new Event(locationId,"An enchanted tree offers you a blessing--for a sacrifice. Do you accept?",
+                    [
+                            new EventChoice() { ChoiceText = "- Accept", ActionText = "Health: -20", ActionToTake = p => p.UpdateStatus(-20, +50) },
+                            new EventChoice() { ChoiceText = "- Decline", ActionText = "Supplies: -10", ActionToTake = p => p.UpdateStatus(0, -10)}
+                    ]),
+                
+            };
 
             var setSwamp = new List<Event>
-                {
-                    //new Event(locationId,"You stumble upon a glowing pool. Do you drink from it or avoid it?", new Dictionary<string, Action<Person>>
-                    //{
-                    //    {"Drink", p => p.UpdateStatus(+20, -15)},
-                    //    {"Avoid", p => p.UpdateStatus(0, -10)},
-                    //}),
-                    //new Event(locationId,"A group of villagers request help defending against raiders. Do you assist?", new Dictionary<string, Action<Person>>
-                    //{
-                    //    {"Assist", p => p.UpdateStatus(-30, +50)},
-                    //    {"Decline", p => p.UpdateStatus(0, -10)},
-                    //}),
-                    //new Event(locationId,"A mystical beast blocks your path. Do challenge it or wait?", new Dictionary<string, Action<Person>>
-                    //{
-                    //    {"Challenge", p => p.UpdateStatus(-40, +30)},
-                    //    {"Wait", p => p.UpdateStatus(0, -5)},
-                    //}),
-                    //new Event(locationId,"A traveling bard offers to teach you a song for a price. Do you agree?", new Dictionary<string, Action<Person>>
-                    //{
-                    //    {"Agree", p => p.UpdateStatus(-0, -20)},
-                    //    {"Decline", p => p.UpdateStatus(0, 0)},
-                    //}),
-                    //new Event(locationId,"You encounter a magical fountain that promises great power. Do you step in?", new Dictionary<string, Action<Person>>
-                    //{
-                    //    {"Step in", p => p.UpdateStatus(+100, 0)},
-                    //    {"Avoid", p => p.UpdateStatus(-15, -10)},
-                    //})
-                };
+            {
+                new Event(locationId,"You stumble upon a glowing pool. Do you drink from it or avoid it?",
+                    [
+                            new EventChoice() { ChoiceText = "- Drink", ActionText = "Health: +20", ActionToTake = p => p.UpdateStatus(+20, 0) },
+                            new EventChoice() { ChoiceText = "- Avoid", ActionText = "Supplies: -10", ActionToTake = p => p.UpdateStatus(0, -10)}
+                    ]),
+                new Event(locationId,"A group of villagers request help defending against raiders. Do you assist?",
+                    [
+                            new EventChoice() { ChoiceText = "- Assist", ActionText = "Health: -30", ActionToTake = p => p.UpdateStatus(-300, +50) },
+                            new EventChoice() { ChoiceText = "- Decline", ActionText = "Supplies: -10", ActionToTake = p => p.UpdateStatus(0, -10)}
+                    ]),
+                new Event(locationId,"A mystical beast blocks your path. Do challenge it or wait?A mystical beast blocks your path. Do challenge it or wait?",
+                    [
+                            new EventChoice() { ChoiceText = "- Challenge", ActionText = "Health: -100", ActionToTake = p => p.UpdateStatus(-100, -0) },
+                            new EventChoice() { ChoiceText = "- Wait", ActionText = "Supplies: -0", ActionToTake = p => p.UpdateStatus(0, -0)}
+                    ]),
+                new Event(locationId,"A traveling bard offers to teach you a song for a price. Do you agree?",
+                    [
+                            new EventChoice() { ChoiceText = "- Accept", ActionText = "Health: -0", ActionToTake = p => p.UpdateStatus(-0, -10) },
+                            new EventChoice() { ChoiceText = "- Decline", ActionText = "Supplies: -10", ActionToTake = p => p.UpdateStatus(0, -10)}
+                    ]),
+                new Event(locationId,"You encounter a magical fountain that promises great power. Do you step in?",
+                    [
+                            new EventChoice() { ChoiceText = "- Step in", ActionText = "Health: +100", ActionToTake = p => p.UpdateStatus(+100, +50) },
+                            new EventChoice() { ChoiceText = "- Avoid", ActionText = "Supplies: -10", ActionToTake = p => p.UpdateStatus(0, -10)}
+                    ]),
+                
+            };
 
             // logic to return appropriate set
             switch (locationId)
@@ -312,7 +322,7 @@ namespace WaywardHorizons.Services
             titleSequence.Append("/*                                                                                           */\n");
             titleSequence.Append("/*                                                                                           */\n");
             titleSequence.Append("/*********************************************************************************************/\n");
-            
+
             Console.Write(titleSequence.ToString());
         }
 
