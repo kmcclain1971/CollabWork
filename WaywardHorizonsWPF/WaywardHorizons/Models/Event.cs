@@ -25,31 +25,5 @@ namespace WaywardHorizons.Helpers
             _choices = choices;
             _choicesList = eventChoices;
         }
-
-        //<summary>//
-        // on an incorrect input I am attempting to make it so that the event gets repeated with an option to try again
-        public void Trigger(Person adventurer)
-        {
-            Console.WriteLine(Description);
-            Console.WriteLine("Your choices (Case Sensitive):");
-            foreach (var choice in _choices.Keys)
-            {
-                Console.WriteLine($"- {choice}");
-            }
-            Console.Write("Your choices:");
-            string userChoice = Console.ReadLine();
-            if (_choices.ContainsKey(userChoice))
-            {
-                _choices[userChoice].Invoke(adventurer);
-                Console.WriteLine($"Health: {adventurer.Health}, Supplies: {adventurer.Supplies}\n");
-            }
-            else
-            {
-                Console.Clear();
-                Console.WriteLine("Invalid choice! Try again.\n");
-                Trigger(adventurer);
-               
-            }
-        }
     }
 }
