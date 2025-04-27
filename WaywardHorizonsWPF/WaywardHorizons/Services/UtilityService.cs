@@ -1,7 +1,4 @@
 ﻿using Microsoft.Extensions.Logging;
-using System.IO;
-using System.Text;
-using System.Windows.Controls;
 using WaywardHorizons.Characters;
 using WaywardHorizons.Helpers;
 using WaywardHorizons.Interfaces;
@@ -15,36 +12,6 @@ namespace WaywardHorizons.Services
         public UtilityService(ILogger<UtilityService> logger)
         {
             _logger = logger;
-        }
-
-        public Random RandomNumberGenerator = new Random();
-
-        //overloaded method - more than one method with the same name
-        public int GetRandomNumber(int max)
-        {
-            return RandomNumberGenerator.Next(max);
-        }
-
-        public int GetRandomNumber(int min, int max)
-        {
-            return RandomNumberGenerator.Next(min, max);
-        }
-
-
-        public void Print(string message)
-        {
-            Console.WriteLine(message);
-        }
-
-        public void Clear()
-        {
-            Console.Clear();
-        }
-
-        public void Pause()
-        {
-            Print("Press any key to continue");
-            Console.ReadKey();
         }
 
         /// <summary>
@@ -236,129 +203,6 @@ namespace WaywardHorizons.Services
             eventAction.Invoke(adventurer);
             return adventurer;
         }
-
-        public string GetTextFromExternalFile(string path)
-        {
-            string output = "";
-            if (File.Exists(path))
-            {
-                //the sky is bright
-                output = File.ReadAllText(path);
-            }
-            else
-            {
-                //doom and gloom
-                return "File not found - or some other default text";
-            }
-
-            return output;
-        }
-
-        public string[] GetArrayTextFromExternalFile(string path)
-        {
-            string[] output;
-            if (File.Exists(path))
-            {
-                //the sky is bright
-                output = File.ReadAllLines(path);
-            }
-
-            return null;
-        }
-
-        public string GetNextStep(int locationId)
-        {
-            switch (locationId)
-            {
-                case 1:
-                    Print(GetStepText("main")); // location specific eventually
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    break;
-                default:
-                    Pause();
-                    break;
-            }
-            return string.Empty;
-        }
-
-        /// <summary>
-        /// This method should return step text for a given location
-        /// </summary>
-        /// <returns></returns>
-        public string GetStepText(string textType)
-        {
-            var mainRoadTexts = new string[] { "Text 1", "Text 2" };
-            var placesFoundTexts = new string[] { "Text 1", "Text 2" };
-            var actionsTexts = new string[] { "Leave", "Fight" };
-
-            switch (textType)
-            {
-                case "main":
-                    break;
-                case "place":
-                    break;
-                case "action":
-                    break;
-            }
-
-            return string.Empty;
-        }
-
-        public void WriteTitle()
-        {
-            var titleSequence = new StringBuilder();
-            titleSequence.Append("/*********************************************************************************************/\n");
-            titleSequence.Append("/*                                                                                           */\n");
-            titleSequence.Append("/*                                                                                           */\n");
-            titleSequence.Append("/*                                  Wayward Horizons                                         */\n");
-            titleSequence.Append("/*                                  by Conor McClain                                         */\n");
-            titleSequence.Append("/*                                                                                           */\n");
-            titleSequence.Append("/*                                                                                           */\n");
-            titleSequence.Append("/*********************************************************************************************/\n");
-
-            Console.Write(titleSequence.ToString());
-        }
-
-        public void WriteHeader(Person adventurer)
-        {
-            var titleSequence = new StringBuilder();
-            titleSequence.Append("/*********************************************************************************************/\n");
-            titleSequence.Append("/***********************            Wayward Horizons          ********************************/\n");
-            titleSequence.Append("/********************  Adventurer: " + adventurer.PlayerName + " || Health: " + adventurer.Health + " || Supplies: " + adventurer.Supplies + "  ********************/\n");
-            titleSequence.Append("/*********************************************************************************************/\n");
-            titleSequence.Append("\n\n\n");
-
-            Console.Write(titleSequence.ToString());
-        }
-
-        public void WriteFooter()
-        {
-            throw new NotImplementedException();
-        }
-
-        private string GenerateRandomLocationName()
-        {
-            // generate the random data for location names
-            List<string> prefix = new List<string>() { "Mount", "Castle", "Village of", "Lake", "Valley of", "Desert of", "Forest of", "Realm of" };
-            List<string> names = new List<string>() { "Badassiveness", "Awesomeness", "Fabulousness", "Fantazmicness", "Lava", "Ice", "Scarlet Rot", "Winterfell" };
-
-            var locationName = $"{prefix[GetRandomNumber(prefix.Count)]} {names[GetRandomNumber(names.Count)]}";
-
-            return locationName;
-        }
-
-        public void GetNextStep(object locationId)
-        {
-            throw new NotImplementedException();
-        }
-
 
     }
 }

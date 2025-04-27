@@ -1,6 +1,4 @@
-﻿using WaywardHorizons.Accessories;
-
-namespace WaywardHorizons.Characters
+﻿namespace WaywardHorizons.Characters
 {
     public class Person
     {
@@ -8,14 +6,10 @@ namespace WaywardHorizons.Characters
         public string PlayerName {  get; set; }
         public int Health { get; set; } = 100;
         public int Supplies { get; set; } = 100;
-        public List<Item> Items { get; set; }
         #endregion
 
         #region Constructor
-        public Person ()
-        {
-            
-        }
+        public Person () { }
         #endregion
 
         #region Public Methods
@@ -32,17 +26,6 @@ namespace WaywardHorizons.Characters
             }
         }
 
-        public void Equip(WearableItem item)
-        {
-            //code here to "equip a wearable item"
-            throw new NotImplementedException();
-        }
-
-        public void Use(Item item)
-        {
-            //code here to "use an item"
-            throw new NotImplementedException();
-        }
 
         public void UpdateStatus(int healthChange, int suppliesChange)
         {

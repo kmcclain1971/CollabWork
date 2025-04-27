@@ -1,6 +1,4 @@
-﻿using WaywardHorizons.Models;
-
-namespace WaywardHorizons.Interfaces
+﻿namespace WaywardHorizons.Interfaces
 {
     public interface IMainViewModel
     {

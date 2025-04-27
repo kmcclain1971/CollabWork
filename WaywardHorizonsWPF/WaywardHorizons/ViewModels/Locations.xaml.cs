@@ -19,12 +19,13 @@ namespace WaywardHorizons
             InitializeComponent();
             _player = player;
             _utilityService = utilityService;
+            tbWelcomeText.Text = "Welcome " + _player.PlayerName + "! Choose a location to explore!";
         }
 
         private void Lake_Click(object sender, RoutedEventArgs e)
         {
-            int lakeId = 1;
-            NavigationService.Navigate(new LakeViewModel(_player, lakeId, _utilityService));
+            int locationId = 1;
+            NavigationService.Navigate(new LakeViewModel(_player, locationId, _utilityService));
         }
 
         private void Forest_Click(object sender, RoutedEventArgs e)
