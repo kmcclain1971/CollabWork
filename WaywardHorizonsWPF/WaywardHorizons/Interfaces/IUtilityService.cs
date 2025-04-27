@@ -8,5 +8,7 @@ namespace WaywardHorizons.Interfaces
         List<Event> GenerateEvents(int locationId);
         Person ParseEvent(Action<Person> eventAction, Person adventurer);
 
+        string GetPlayerStatus(Person player);
+
     }
 }

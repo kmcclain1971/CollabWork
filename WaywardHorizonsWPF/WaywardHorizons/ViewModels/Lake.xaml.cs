@@ -11,6 +11,7 @@ namespace WaywardHorizons
     /// </summary>
     public partial class LakeViewModel : Page
     {
+        const string ViewTitle = "Lake Lava";
         private readonly IUtilityService _utilityService;
         private Person _player;
         private int _locationId;
@@ -28,6 +29,7 @@ namespace WaywardHorizons
             _currentEvent = 0;
 
             InitializeComponent();
+            tbTitle.Text = ViewTitle;
             SetPlayerStats();
             ShowEvent(_currentEvent);
         }
@@ -76,7 +78,7 @@ namespace WaywardHorizons
             {
                 // show the end of exploration details
                 ShowHideControls("showConclusion");
-                tbEvent.Text = "Congratulations \"" + _player.PlayerName + "\"! You have explored all there is of Lava Lake! Feel free to return to the map and select another location to explore! :)";
+                tbEvent.Text = "Congratulations \"" + _player.PlayerName + "\"! You have explored all there is of " + tbTitle.Text + "! Feel free to return to the map and select another location to explore! :)";
                 btnContinue.Content = "Return to Map";
                 btnContinue.Click += new RoutedEventHandler(btnContinue_ReturnToMap);
             }
@@ -98,8 +100,7 @@ namespace WaywardHorizons
 
         private void SetPlayerStats()
         {
-            var statsText = "Health: " + _player.Health + "\n";
-            statsText += "Supplies: " + _player.Supplies;
+            var statsText = _utilityService.GetPlayerStatus(_player);
             tbPlayerStats.Text = statsText;
         }
 

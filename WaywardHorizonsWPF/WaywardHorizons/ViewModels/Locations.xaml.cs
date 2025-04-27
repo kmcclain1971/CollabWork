@@ -18,6 +18,8 @@ namespace WaywardHorizons
         {
             InitializeComponent();
             _player = player;
+            _player.Supplies = 100;
+            _player.Health = 100;
             _utilityService = utilityService;
             tbWelcomeText.Text = "Welcome " + _player.PlayerName + "! Choose a location to explore!";
         }
@@ -30,22 +32,26 @@ namespace WaywardHorizons
 
         private void Forest_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new ForestViewModel());
+            int locationId = 2;
+            NavigationService.Navigate(new ForestViewModel(_player, locationId, _utilityService));
         }
 
         private void Swamp_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new SwampViewModel());
+            int locationId = 3;
+            NavigationService.Navigate(new SwampViewModel(_player, locationId, _utilityService));
         }
 
         private void Grove_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new GroveViewModel());
+            int locationId = 4;
+            NavigationService.Navigate(new GroveViewModel(_player, locationId, _utilityService));
         }
 
         private void Desert_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new DesertViewModel());
+            int locationId = 5;
+            NavigationService.Navigate(new DesertViewModel(_player, locationId, _utilityService));
         }
     }
 }

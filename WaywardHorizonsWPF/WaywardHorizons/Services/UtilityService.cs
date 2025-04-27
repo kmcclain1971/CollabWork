@@ -37,7 +37,7 @@ namespace WaywardHorizons.Services
                     ]),
                      new Event(locationId,"A traveler offers to join your group, but they need supplies. Do you accept them??",
                     [
-                            new EventChoice() { ChoiceText = "- Accept", ActionText = "Health: -0", ActionToTake = p => p.UpdateStatus(-0, 0) },
+                            new EventChoice() { ChoiceText = "- Accept", ActionText = "Health: 0", ActionToTake = p => p.UpdateStatus(0, 0) },
                             new EventChoice() { ChoiceText = "- Decline", ActionText = "Supplies: -15", ActionToTake = p => p.UpdateStatus(0, -15)}
                     ]),
                      new Event(locationId,"You find a berry bush. Do you risk eating the berries?",
@@ -57,17 +57,17 @@ namespace WaywardHorizons.Services
             {
                  new Event(locationId,"You encounter a group of thieving goblins demanding supplies from your group. Do you fight the group or meet their demands?",
                     [
-                            new EventChoice() { ChoiceText = "- Fight", ActionText = "Health: -40", ActionToTake = p => p.UpdateStatus(-10, 0) },
+                            new EventChoice() { ChoiceText = "- Fight", ActionText = "Health: -40", ActionToTake = p => p.UpdateStatus(-40, 0) },
                             new EventChoice() { ChoiceText = "- Meet Demands", ActionText = "Supplies: -20", ActionToTake = p => p.UpdateStatus(0, -20)}
                     ]),
                  new Event(locationId,"\"You find an abandoned campsite. Do you stop and look around or continue your journey?\"",
                     [
-                            new EventChoice() { ChoiceText = "- Stop and Look", ActionText = "Health: -0", ActionToTake = p => p.UpdateStatus(-0, 0) },
+                            new EventChoice() { ChoiceText = "- Stop and Look", ActionText = "Health: 0", ActionToTake = p => p.UpdateStatus(0, 0) },
                             new EventChoice() { ChoiceText = "- Continue", ActionText = "Supplies: -20", ActionToTake = p => p.UpdateStatus(0, -20)}
                     ]),
                  new Event(locationId,"A wandering trader offers you healing potions in exhange for supplies. Do you trade with them?",
                     [
-                            new EventChoice() { ChoiceText = "- Ignore", ActionText = "Health: -0", ActionToTake = p => p.UpdateStatus(-0, 0) },
+                            new EventChoice() { ChoiceText = "- Ignore", ActionText = "Health: 0", ActionToTake = p => p.UpdateStatus(0, 0) },
                             new EventChoice() { ChoiceText = "- Trade", ActionText = "Supplies: -10", ActionToTake = p => p.UpdateStatus(0, -10)}
                     ]),
                  new Event(locationId,"A dragon appears! Do you fight the dragon or Flee?",
@@ -97,23 +97,23 @@ namespace WaywardHorizons.Services
                     ]),
                 new Event(locationId,"You encounter a mysterious merchant. Do you purchase their wares?",
                     [
-                            new EventChoice() { ChoiceText = "- Decline", ActionText = "Health: -0", ActionToTake = p => p.UpdateStatus(-0, 0) },
+                            new EventChoice() { ChoiceText = "- Decline", ActionText = "Health: 0", ActionToTake = p => p.UpdateStatus(0, 0) },
                             new EventChoice() { ChoiceText = "- Purchase", ActionText = "Supplies: +40", ActionToTake = p => p.UpdateStatus(0, +40)}
                     ]),
                 new Event(locationId,"A wild wolf approaches! Do you fight or try to scare it away?",
                     [
                             new EventChoice() { ChoiceText = "- Fight", ActionText = "Health: -20", ActionToTake = p => p.UpdateStatus(-20, 0) },
-                            new EventChoice() { ChoiceText = "- Scare it away", ActionText = "Supplies: -0", ActionToTake = p => p.UpdateStatus(0, -0)}
+                            new EventChoice() { ChoiceText = "- Scare it away", ActionText = "Supplies: 0", ActionToTake = p => p.UpdateStatus(0, 0)}
                     ]),
                 new Event(locationId,"You encounter a mysterious merchant. Do you purchase their wares?",
                     [
-                            new EventChoice() { ChoiceText = "- Decline", ActionText = "Health: -0", ActionToTake = p => p.UpdateStatus(-0, 0) },
+                            new EventChoice() { ChoiceText = "- Decline", ActionText = "Health: 0", ActionToTake = p => p.UpdateStatus(0, 0) },
                             new EventChoice() { ChoiceText = "- Purchase", ActionText = "Supplies: +40", ActionToTake = p => p.UpdateStatus(0, +40)}
                     ]),
                 new Event(locationId,"A dense fog engulfs your surroundings. Do you press forward or wait it out?",
                     [
                             new EventChoice() { ChoiceText = "- Press forward", ActionText = "Health: -50", ActionToTake = p => p.UpdateStatus(-50, 0) },
-                            new EventChoice() { ChoiceText = "- Wait it out", ActionText = "Supplies: -0", ActionToTake = p => p.UpdateStatus(0, -0)}
+                            new EventChoice() { ChoiceText = "- Wait it out", ActionText = "Supplies: 0", ActionToTake = p => p.UpdateStatus(0, 0)}
                     ]),
 
             };
@@ -133,11 +133,11 @@ namespace WaywardHorizons.Services
                 new Event(locationId,"You discover a treasure chest. Do you open it or leave it untouched",
                     [
                             new EventChoice() { ChoiceText = "- Open", ActionText = "Health: -10", ActionToTake = p => p.UpdateStatus(-10, +30) },
-                            new EventChoice() { ChoiceText = "- Leave it", ActionText = "Supplies: -0", ActionToTake = p => p.UpdateStatus(0, -10)}
+                            new EventChoice() { ChoiceText = "- Leave it", ActionText = "Supplies: 0", ActionToTake = p => p.UpdateStatus(0, 0)}
                     ]),
                 new Event(locationId,"A rouge offers you a rare map in exhange for some food. Do you accept",
                     [
-                            new EventChoice() { ChoiceText = "- Accept", ActionText = "Health: -0", ActionToTake = p => p.UpdateStatus(-0, -10) },
+                            new EventChoice() { ChoiceText = "- Accept", ActionText = "Health: 0", ActionToTake = p => p.UpdateStatus(0, -10) },
                             new EventChoice() { ChoiceText = "- Decline", ActionText = "Supplies: -10", ActionToTake = p => p.UpdateStatus(0, -10)}
                     ]),
                 new Event(locationId,"An enchanted tree offers you a blessing--for a sacrifice. Do you accept?",
@@ -157,17 +157,17 @@ namespace WaywardHorizons.Services
                     ]),
                 new Event(locationId,"A group of villagers request help defending against raiders. Do you assist?",
                     [
-                            new EventChoice() { ChoiceText = "- Assist", ActionText = "Health: -30", ActionToTake = p => p.UpdateStatus(-300, +50) },
+                            new EventChoice() { ChoiceText = "- Assist", ActionText = "Health: -30", ActionToTake = p => p.UpdateStatus(-30, +50) },
                             new EventChoice() { ChoiceText = "- Decline", ActionText = "Supplies: -10", ActionToTake = p => p.UpdateStatus(0, -10)}
                     ]),
                 new Event(locationId,"A mystical beast blocks your path. Do challenge it or wait?A mystical beast blocks your path. Do challenge it or wait?",
                     [
                             new EventChoice() { ChoiceText = "- Challenge", ActionText = "Health: -100", ActionToTake = p => p.UpdateStatus(-100, -0) },
-                            new EventChoice() { ChoiceText = "- Wait", ActionText = "Supplies: -0", ActionToTake = p => p.UpdateStatus(0, -0)}
+                            new EventChoice() { ChoiceText = "- Wait", ActionText = "Supplies: 0", ActionToTake = p => p.UpdateStatus(0, 0)}
                     ]),
                 new Event(locationId,"A traveling bard offers to teach you a song for a price. Do you agree?",
                     [
-                            new EventChoice() { ChoiceText = "- Accept", ActionText = "Health: -0", ActionToTake = p => p.UpdateStatus(-0, -10) },
+                            new EventChoice() { ChoiceText = "- Accept", ActionText = "Health: 0", ActionToTake = p => p.UpdateStatus(0, -10) },
                             new EventChoice() { ChoiceText = "- Decline", ActionText = "Supplies: -10", ActionToTake = p => p.UpdateStatus(0, -10)}
                     ]),
                 new Event(locationId,"You encounter a magical fountain that promises great power. Do you step in?",
@@ -204,5 +204,13 @@ namespace WaywardHorizons.Services
             return adventurer;
         }
 
+
+        public string GetPlayerStatus(Person player)
+        {
+            var statsText = "Health: " + player.Health + "\n";
+            statsText += "Supplies: " + player.Supplies;
+
+            return statsText;
+        }
     }
 }

@@ -10,8 +10,8 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="65*" />
-            <ColumnDefinition Width="35*" />
+            <ColumnDefinition Width="60*" />
+            <ColumnDefinition Width="40*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <!-- header row -->
@@ -26,7 +26,7 @@
         </Grid.Background>
 
         <!-- header title text -->
-        <TextBlock x:Name="tbTitle" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="24,1,0,0" TextWrapping="Wrap" Text="Lake Lava" VerticalAlignment="Top" FontSize="48" FontFamily="Algerian" Foreground="White">
+        <TextBlock x:Name="tbTitle" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="24,1,0,0" TextWrapping="Wrap" Text="Title Here" VerticalAlignment="Top" FontSize="48" FontFamily="Algerian" Foreground="White">
             <TextBlock.Effect>
                 <DropShadowEffect/>
             </TextBlock.Effect>
