@@ -44,7 +44,7 @@
                 <TextBlock.Effect>
                     <DropShadowEffect/>
                 </TextBlock.Effect><Run Text="Enter Choice Below..."/></TextBlock>
-            <ListBox x:Name="lbEvents" Width="300" Height="100" BorderThickness="0" ItemsSource="{Binding Choices}" Background="{x:Null}" Foreground="White" SelectionChanged="lbEvents_SelectionChanged" d:ItemsSource="{d:SampleData ItemCount=5}">
+            <ListBox x:Name="lbEvents" Width="300" Height="100" BorderThickness="0" ItemsSource="{Binding Choices}" Background="{x:Null}" Foreground="White" SelectionChanged="lbEvents_SelectionChanged" d:ItemsSource="{d:SampleData ItemCount=5}" FontSize="14" FontWeight="Bold">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
