@@ -1,4 +1,7 @@
-﻿namespace WaywardHorizons.Characters
+﻿using System.Windows;
+using WaywardHorizons.Helpers;
+
+namespace WaywardHorizons.Characters
 {
     public class Person
     {

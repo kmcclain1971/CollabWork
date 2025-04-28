@@ -58,6 +58,7 @@ namespace WaywardHorizons
             {
                 var choice = (EventChoice)lbEvents.SelectedItems[0]; // Actions are at [0]
                 ParseChoice(choice);
+                CheckForDeath();
             }
         }
         #endregion
@@ -80,6 +81,19 @@ namespace WaywardHorizons
                 // show the end of exploration details
                 ShowHideControls("showConclusion");
                 tbEvent.Text = "Congratulations \"" + _player.PlayerName + "\"! You have explored all there is of " + tbTitle.Text + "! Feel free to return to the map and select another location to explore! :)";
+                btnContinue.Content = "Return to Map";
+                btnContinue.Click += new RoutedEventHandler(btnContinue_ReturnToMap);
+            }
+        }
+
+        private void CheckForDeath()
+        {
+            if (_player.Health <= 0)
+            {
+                // show/hide stuff as necessary
+                ShowHideControls("showDeath");
+
+                tbEvent.Text = "OH NO! You have succumbed to the hardships of the trail. Feel free to return to the map and select another location to explore! :)";
                 btnContinue.Content = "Return to Map";
                 btnContinue.Click += new RoutedEventHandler(btnContinue_ReturnToMap);
             }
@@ -120,6 +134,12 @@ namespace WaywardHorizons
                     btnContinue.Visibility = Visibility.Visible;
                     break;
                 case "showConclusion":
+                    spEventActions.Visibility = Visibility.Visible;
+                    lbEvents.Visibility = Visibility.Hidden;
+                    tbActionResults.Visibility = Visibility.Hidden;
+                    btnContinue.Visibility = Visibility.Visible;
+                    break;
+                case "showDeath":
                     spEventActions.Visibility = Visibility.Visible;
                     lbEvents.Visibility = Visibility.Hidden;
                     tbActionResults.Visibility = Visibility.Hidden;
