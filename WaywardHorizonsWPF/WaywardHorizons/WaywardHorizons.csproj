@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <None Remove="images\Desert Valley.png" />
-    <None Remove="images\dt_arcane_icon_512.png" />
     <None Remove="images\Forest of Winterfell.png" />
     <None Remove="images\LakeLava.png" />
     <None Remove="images\MAP.png" />
@@ -26,9 +25,6 @@
 
   <ItemGroup>
     <Resource Include="images\Desert Valley.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="images\dt_arcane_icon_512.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="images\Forest of Winterfell.png">
