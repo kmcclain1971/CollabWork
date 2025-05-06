@@ -47,6 +47,7 @@ namespace WaywardHorizons
             NavigationService.Navigate(new LocationsViewModel(_player, _utilityService));
         }
 
+
         /// <summary>
         /// This will get the selection into an instance of EventChoice and pass that to the ParseChoice method
         /// </summary>

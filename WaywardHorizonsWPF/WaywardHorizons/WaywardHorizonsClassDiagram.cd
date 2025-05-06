@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="WaywardHorizons.DesertViewModel" BaseTypeListCollapsed="true">
+    <Position X="22" Y="8" Width="5.5" />
+    <TypeIdentifier>
+      <HashCode>AEABAIQAABAIkAFAABAACAAAAAAAAQAAAAAAACAAAAA=</HashCode>
+      <FileName>ViewModels\Desert.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WaywardHorizons.ForestViewModel" BaseTypeListCollapsed="true">
+    <Position X="4" Y="8" Width="5.5" />
+    <TypeIdentifier>
+      <HashCode>AEABAIQAABAIkAFAABAACAAAAAAAAQAAAAAAACAAAAA=</HashCode>
+      <FileName>ViewModels\Forest.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WaywardHorizons.GroveViewModel" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="8" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AEABAIQAABAIkAFAABAACAAAAAAAAQAAAAAAACAAAAA=</HashCode>
+      <FileName>ViewModels\Grove.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WaywardHorizons.LakeViewModel" BaseTypeListCollapsed="true">
+    <Position X="28" Y="8" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AEABAIQAABAIkAFAABAACAAAAAAAAQAAAAAAACAAAAA=</HashCode>
+      <FileName>ViewModels\Lake.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WaywardHorizons.LocationsViewModel" BaseTypeListCollapsed="true">
+    <Position X="23.5" Y="4.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAACCAQCAAAAAAAEAAAAAAAAAAAAAg=</HashCode>
+      <FileName>ViewModels\Locations.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WaywardHorizons.MainViewModel" BaseTypeListCollapsed="true">
+    <Position X="13" Y="4.75" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\MainViewModel.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WaywardHorizons.MenuViewModel" BaseTypeListCollapsed="true">
+    <Position X="18.75" Y="4.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAEAAAAAAAAAAASAAAAAAAA=</HashCode>
+      <FileName>ViewModels\MenuViewModel.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WaywardHorizons.SwampViewModel" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="8" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AEABAIQAABAIkAFAABAACAAAAAAAAQAAAAAAACAAAAA=</HashCode>
+      <FileName>ViewModels\Swamp.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WaywardHorizons.App">
+    <Position X="5" Y="1.75" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAACAABAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WaywardHorizons.MainWindow" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="4.75" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WaywardHorizons.Helpers.Event">
+    <Position X="15" Y="1.75" Width="7.25" />
+    <TypeIdentifier>
+      <HashCode>AAAIABAAAAAwAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Event.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WaywardHorizons.Helpers.EventChoice">
+    <Position X="22.75" Y="1.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAIAAIAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\EventChoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WaywardHorizons.Characters.Person">
+    <Position X="26.5" Y="2" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AEEACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Models\Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WaywardHorizons.Services.UtilityService" BaseTypeListCollapsed="true">
+    <Position X="10.25" Y="1.75" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAEEAA=</HashCode>
+      <FileName>Services\UtilityService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="WaywardHorizons.Interfaces.IMainViewModel">
+    <Position X="19.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IMainViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WaywardHorizons.Interfaces.IUtilityService">
+    <Position X="12.25" Y="13.25" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEAA=</HashCode>
+      <FileName>Interfaces\IUtilityService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
